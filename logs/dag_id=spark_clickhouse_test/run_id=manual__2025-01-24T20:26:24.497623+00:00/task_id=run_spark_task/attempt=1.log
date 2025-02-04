@@ -1,0 +1,30 @@
+[2025-01-24T20:26:51.607+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-24T20:26:51.619+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_clickhouse_test.run_spark_task manual__2025-01-24T20:26:24.497623+00:00 [queued]>
+[2025-01-24T20:26:51.626+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_clickhouse_test.run_spark_task manual__2025-01-24T20:26:24.497623+00:00 [queued]>
+[2025-01-24T20:26:51.626+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-24T20:26:51.637+0000] {taskinstance.py:2889} INFO - Executing <Task(_PySparkDecoratedOperator): run_spark_task> on 2025-01-24 20:26:24.497623+00:00
+[2025-01-24T20:26:51.645+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1121) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-24T20:26:51.646+0000] {standard_task_runner.py:72} INFO - Started process 1123 to run task
+[2025-01-24T20:26:51.647+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'spark_clickhouse_test', 'run_spark_task', 'manual__2025-01-24T20:26:24.497623+00:00', '--job-id', '118', '--raw', '--subdir', 'DAGS_FOLDER/spark_clickhouse_test.py', '--cfg-path', '/tmp/tmpaa_o2yrf']
+[2025-01-24T20:26:51.649+0000] {standard_task_runner.py:105} INFO - Job 118: Subtask run_spark_task
+[2025-01-24T20:26:51.682+0000] {task_command.py:467} INFO - Running <TaskInstance: spark_clickhouse_test.run_spark_task manual__2025-01-24T20:26:24.497623+00:00 [running]> on host 868615f326e1
+[2025-01-24T20:26:51.737+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Smalch' AIRFLOW_CTX_DAG_ID='spark_clickhouse_test' AIRFLOW_CTX_TASK_ID='run_spark_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T20:26:24.497623+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-24T20:26:24.497623+00:00'
+[2025-01-24T20:26:51.739+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-24T20:26:51.747+0000] {base.py:84} INFO - Retrieving connection 'spark'
+[2025-01-24T20:27:06.890+0000] {logging_mixin.py:190} INFO - +-------+-----------+-------------+-------+---------------+--------+--------------------+--------------------+-----+--------------------+------------------+--------------------+--------------------+--------------------+----------+--------+
+|     id|       Name|abbreviations|country|     company_id|industry|                link|           job_title|descr|        profile_link|        University|            duration|            subtitle|         subtitleURL|start_date|end_date|
++-------+-----------+-------------+-------+---------------+--------+--------------------+--------------------+-----+--------------------+------------------+--------------------+--------------------+--------------------+----------+--------+
+|id-1357|Random Name|           IN| Random|          byjus|        |https://in.linked...|Random EduTech co...|     |https://in.linked...|University degree |Jun 2021 - Presen...|                    |                    |  Jun 2021|May 2021|
+|id-2468|Random Name|           KW| Random|         -seara|        |https://br.linked...|Hacking LinkedIn ...|     |https://kw.linked...|  University https|                    |Professional work...|                    |          |        |
+|id-4820|Random Name|           NG| Random|               |        |https://m.faceboo...|Volkswagen Produc...|     |https://ng.linked...|                  |                    |                    |                    |          |        |
+|id-5837|Random Name|           EG| Random|  steigenberger|        |https://de.linked...|         Food Safety|     |                    |University degree |Oct 2023 8 months...|Random Hotels and...|https://de.linked...|  Oct 2023|Oct 2023|
+|id-7531|Random Name|           KW| Random|global-infinity|        |https://kw.linked...|Professional work...|     |https://kw.linked...|  University https|                    |Professional work...|                    |          |        |
++-------+-----------+-------------+-------+---------------+--------+--------------------+--------------------+-----+--------------------+------------------+--------------------+--------------------+--------------------+----------+--------+
+[2025-01-24T20:27:06.894+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-24T20:27:06.904+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-24T20:27:06.904+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=spark_clickhouse_test, task_id=run_spark_task, run_id=manual__2025-01-24T20:26:24.497623+00:00, execution_date=20250124T202624, start_date=20250124T202651, end_date=20250124T202706
+[2025-01-24T20:27:06.943+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-24T20:27:07.004+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-24T20:27:07.016+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
