@@ -37,6 +37,8 @@ def main():
 
     SedonaRegistrator.registerAll(spark)
     spark.sql("use clickhouse")
+
+
     base = '/opt/airflow/airflow'
     path_data = f"{base}/data"
 
@@ -74,8 +76,11 @@ def main():
 
     processed_df = processed_df.filter(F.col("Timestamp").rlike(r"^\d{4}/\d{2}/\d{2} \d{2}:\d{2}"))
 
-    processed_df.show(truncate=False)
+    processed_df.writeTo("card_data.bank_transactions").append()
+    
+    spark.sql('select * from card_data.bank_transactions').show(truncate=False)
 
+    
 if __name__ == "__main__":
     main()
 

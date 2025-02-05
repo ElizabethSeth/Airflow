@@ -13,6 +13,7 @@ from sedona.spark import SedonaContext
 from pyspark import SparkContext
 from lib.clickhouse_operator_extended import ClickHouseOperatorExtended 
 
+CLICKHOUSE_CONN_ID = 'clickhouse'
 PYSPARK_CONN_ID = "spark"
 ram = 25
 
@@ -52,16 +53,25 @@ default_args = {
     doc_md=__doc__
 )
 def pyspark_test_work():
-    spark_submit_task = SparkSubmitOperator(
-        task_id='bank_transactions',
+
+    current_time = ClickHouseOperatorExtended(
+        task_id='execution',
+        clickhouse_conn_id=CLICKHOUSE_CONN_ID,
+        sql='creation_clickhouse.sql',
+    )
+
+
+    read_from_clickhouse = SparkSubmitOperator(
+        task_id='read_data_clickhouse',
         application='dags/spark_app/app_test.py',
         conn_id=PYSPARK_CONN_ID,
         packages=','.join(packages),
-        #executor_cores='1',
         executor_memory=f'{ram}g',
         driver_memory=f'{ram}g',
         verbose=True
     )
-    spark_submit_task
+    
+
+    current_time >> read_from_clickhouse
    
 pyspark_test_work()
