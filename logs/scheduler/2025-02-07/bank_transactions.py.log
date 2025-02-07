@@ -1,0 +1,49 @@
+[2025-02-07T19:16:38.290+0000] {processor.py:186} INFO - Started process (PID=30) to work on /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:16:38.308+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/bank_transactions.py for tasks to queue
+[2025-02-07T19:16:38.311+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:16:38.311+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:16:40.492+0000] {processor.py:925} INFO - DAG(s) 'pyspark_test_work' retrieved from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:16:40.534+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:16:40.534+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-07T19:16:40.560+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:16:40.560+0000] {dag.py:4180} INFO - Setting next_dagrun for pyspark_test_work to None, run_after=None
+[2025-02-07T19:16:40.618+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 2.334 seconds
+[2025-02-07T19:17:10.767+0000] {processor.py:186} INFO - Started process (PID=43) to work on /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:17:10.768+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/bank_transactions.py for tasks to queue
+[2025-02-07T19:17:10.773+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:17:10.773+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:17:11.996+0000] {processor.py:925} INFO - DAG(s) 'pyspark_test_work' retrieved from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:17:12.046+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:17:12.046+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-07T19:17:12.067+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:17:12.066+0000] {dag.py:4180} INFO - Setting next_dagrun for pyspark_test_work to None, run_after=None
+[2025-02-07T19:17:12.087+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 1.326 seconds
+[2025-02-07T19:17:42.253+0000] {processor.py:186} INFO - Started process (PID=56) to work on /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:17:42.253+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/bank_transactions.py for tasks to queue
+[2025-02-07T19:17:42.255+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:17:42.255+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:17:43.032+0000] {processor.py:925} INFO - DAG(s) 'pyspark_test_work' retrieved from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:17:43.056+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:17:43.055+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-07T19:17:43.069+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:17:43.069+0000] {dag.py:4180} INFO - Setting next_dagrun for pyspark_test_work to None, run_after=None
+[2025-02-07T19:17:43.086+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 0.839 seconds
+[2025-02-07T19:18:13.668+0000] {processor.py:186} INFO - Started process (PID=69) to work on /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:13.669+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/bank_transactions.py for tasks to queue
+[2025-02-07T19:18:13.671+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:13.671+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:14.759+0000] {processor.py:925} INFO - DAG(s) 'pyspark_test_work' retrieved from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:14.832+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:14.832+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-07T19:18:14.854+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:14.854+0000] {dag.py:4180} INFO - Setting next_dagrun for pyspark_test_work to None, run_after=None
+[2025-02-07T19:18:14.873+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 1.211 seconds
+[2025-02-07T19:18:45.423+0000] {processor.py:186} INFO - Started process (PID=87) to work on /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:45.474+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/bank_transactions.py for tasks to queue
+[2025-02-07T19:18:45.476+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:45.475+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:46.213+0000] {processor.py:925} INFO - DAG(s) 'pyspark_test_work' retrieved from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:46.237+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:46.236+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-07T19:18:46.253+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:46.253+0000] {dag.py:4180} INFO - Setting next_dagrun for pyspark_test_work to None, run_after=None
+[2025-02-07T19:18:46.272+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 0.854 seconds
+[2025-02-07T19:18:48.729+0000] {processor.py:186} INFO - Started process (PID=94) to work on /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:48.729+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/bank_transactions.py for tasks to queue
+[2025-02-07T19:18:48.731+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:48.731+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:49.541+0000] {processor.py:925} INFO - DAG(s) 'pyspark_test_work' retrieved from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:49.693+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:49.692+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-07T19:18:49.707+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:49.706+0000] {dag.py:4180} INFO - Setting next_dagrun for pyspark_test_work to None, run_after=None
+[2025-02-07T19:18:49.848+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 1.126 seconds
+[2025-02-07T19:18:50.741+0000] {processor.py:186} INFO - Started process (PID=96) to work on /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:50.742+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/bank_transactions.py for tasks to queue
+[2025-02-07T19:18:50.744+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:50.743+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:51.487+0000] {processor.py:925} INFO - DAG(s) 'pyspark_test_work' retrieved from /opt/airflow/dags/bank_transactions.py
+[2025-02-07T19:18:51.495+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:51.494+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-07T19:18:51.507+0000] {logging_mixin.py:190} INFO - [2025-02-07T19:18:51.506+0000] {dag.py:4180} INFO - Setting next_dagrun for pyspark_test_work to None, run_after=None
+[2025-02-07T19:18:51.525+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 0.789 seconds
