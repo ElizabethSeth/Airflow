@@ -58,13 +58,13 @@ def pyspark_test_work():
     current_time = ClickHouseOperatorExtended(
         task_id='execution',
         clickhouse_conn_id=CLICKHOUSE_CONN_ID,
-        sql='creation_clickhouse.sql',
+        #sql='creation_clickhouse.sql',
     )
 
 
     read_from_clickhouse = SparkSubmitOperator(
         task_id='read_data_clickhouse',
-        application='dags/spark_app/app_test.py',
+        application='dags/spark_app/attemps_coding.py',
         conn_id=PYSPARK_CONN_ID,
         packages=','.join(packages),
         executor_memory=f'{ram}g',
