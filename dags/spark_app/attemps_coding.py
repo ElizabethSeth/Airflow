@@ -4,20 +4,21 @@ from pyspark.sql import functions as F
 from sedona.register import SedonaRegistrator
 from pyspark.sql.window import Window
 from pyspark.sql.functions import monotonically_increasing_id
-
+import clickhouse_connect
 CH_IP = os.getenv('CH_IP')
 CLICKHOUSE_USER = os.getenv('CLICKHOUSE_USER')
 CLICKHOUSE_PASSWORD = os.getenv('CLICKHOUSE_PASSWORD')
+CH_PORT = os.getenv('CH_PORT')
+
 CLICKHOUSE_DB = "card_data"
 CLICKHOUSE_TABLE = "transactions"
-CH_PORT = os.getenv('CH_PORT')
 
 ram = 25
 
 def create_spark_session():
     spark = (
         SparkSession.builder
-        .appName('ClickHouseSparkIntegration')
+        .appName('clickhouse_test')
         .config("spark.jars.repositories", "https://artifacts.unidata.ucar.edu/repository/unidata-all")
         .config("spark.sql.catalog.clickhouse", "com.clickhouse.spark.ClickHouseCatalog")
         .config("spark.sql.catalog.clickhouse.host", CH_IP)
@@ -31,9 +32,14 @@ def create_spark_session():
         .getOrCreate()
     )
     
-    SedonaRegistrator.registerAll(spark)
-    return spark
 
+
+    client = clickhouse_connect.get_client(host=CH_IP, port=CH_PORT, user=CLICKHOUSE_USER, password=CLICKHOUSE_PASSWORD)
+    
+
+    SedonaRegistrator.registerAll(spark)
+    spark.sql("use clickhouse")
+    return spark, client
 
 def schema_table(df):
     schema = []
@@ -57,12 +63,12 @@ def preprocess_data(spark, path_data):
 
     return process_df, column_names
     
-def drop_and_create_table(spark, schema):
-    spark.sql(f"DROP TABLE IF EXISTS {CLICKHOUSE_DB}.{CLICKHOUSE_TABLE}")
-    spark.sql(f"""
+def drop_and_create_table(client, schema):
+    client.command(f"DROP TABLE IF EXISTS {CLICKHOUSE_DB}.{CLICKHOUSE_TABLE}")
+    client.command(f"""
                 CREATE TABLE {CLICKHOUSE_DB}.{CLICKHOUSE_TABLE}
                 ({schema}) 
-                ENGINE = MergeTree()
+                ENGINE = MergeTree() 
                 ORDER BY col_0
                 """)
     
@@ -71,13 +77,12 @@ def write_to_clickhouse(df):
     df.writeTo(f"{CLICKHOUSE_DB}.{CLICKHOUSE_TABLE}").append()
 
 def main():
-    spark = create_spark_session()
-    spark.sql(f"USE {CLICKHOUSE_DB}")
+    spark, client = create_spark_session()
     base = '/opt/airflow/airflow'
     path_data = f"{base}/data"
     process_df, column_names = preprocess_data(spark, f"{path_data}/HI-Medium_Patterns.txt")
     schema = schema_table(process_df)
-    drop_and_create_table(spark, schema)
+    drop_and_create_table(client, schema)
     write_to_clickhouse(process_df)
 
     spark.sql(f"SELECT * FROM {CLICKHOUSE_DB}.{CLICKHOUSE_TABLE}").show(truncate=False)

@@ -59,6 +59,7 @@ def pyspark_test_work():
         task_id='execution',
         clickhouse_conn_id=CLICKHOUSE_CONN_ID,
         #sql='creation_clickhouse.sql',
+        sql='SELECT 1',
     )
 
 
@@ -73,6 +74,6 @@ def pyspark_test_work():
     )
     
 
-    current_time >> read_from_clickhouse
+    read_from_clickhouse
    
 pyspark_test_work()
