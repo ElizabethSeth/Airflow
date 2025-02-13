@@ -1,0 +1,21 @@
+[2025-02-13T18:23:19.028+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-13T18:23:19.042+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pyspark_test_work.execution manual__2025-02-13T18:23:17.456326+00:00 [queued]>
+[2025-02-13T18:23:19.049+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pyspark_test_work.execution manual__2025-02-13T18:23:17.456326+00:00 [queued]>
+[2025-02-13T18:23:19.050+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-13T18:23:19.062+0000] {taskinstance.py:2889} INFO - Executing <Task(ClickHouseOperatorExtended): execution> on 2025-02-13 18:23:17.456326+00:00
+[2025-02-13T18:23:19.070+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2527) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-13T18:23:19.072+0000] {standard_task_runner.py:72} INFO - Started process 2532 to run task
+[2025-02-13T18:23:19.072+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pyspark_test_work', 'execution', 'manual__2025-02-13T18:23:17.456326+00:00', '--job-id', '357', '--raw', '--subdir', 'DAGS_FOLDER/bank_transactions.py', '--cfg-path', '/tmp/tmpborxlc56']
+[2025-02-13T18:23:19.074+0000] {standard_task_runner.py:105} INFO - Job 357: Subtask execution
+[2025-02-13T18:23:19.110+0000] {task_command.py:467} INFO - Running <TaskInstance: pyspark_test_work.execution manual__2025-02-13T18:23:17.456326+00:00 [running]> on host 4dc83e4848ba
+[2025-02-13T18:23:19.183+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Smalch' AIRFLOW_CTX_DAG_ID='pyspark_test_work' AIRFLOW_CTX_TASK_ID='execution' AIRFLOW_CTX_EXECUTION_DATE='2025-02-13T18:23:17.456326+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-13T18:23:17.456326+00:00'
+[2025-02-13T18:23:19.184+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-13T18:23:19.194+0000] {base.py:84} INFO - Retrieving connection 'clickhouse'
+[2025-02-13T18:23:19.194+0000] {clickhouse.py:79} INFO - SELECT 1
+[2025-02-13T18:23:19.327+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-13T18:23:19.328+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pyspark_test_work, task_id=execution, run_id=manual__2025-02-13T18:23:17.456326+00:00, execution_date=20250213T182317, start_date=20250213T182319, end_date=20250213T182319
+[2025-02-13T18:23:19.367+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-13T18:23:19.384+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-13T18:23:19.386+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
