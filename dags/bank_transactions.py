@@ -33,8 +33,6 @@ packages = [
 
 
 
-
-
 default_args = {
     "owner": "Smalch",
     "depends_on_past": False,
@@ -54,14 +52,6 @@ default_args = {
     doc_md=__doc__
 )
 def pyspark_test_work():
-
-    current_time = ClickHouseOperatorExtended(
-        task_id='execution',
-        clickhouse_conn_id=CLICKHOUSE_CONN_ID,
-        #sql='creation_clickhouse.sql',
-        sql='SELECT 1',
-    )
-
 
     read_from_clickhouse = SparkSubmitOperator(
         task_id='read_data_clickhouse',

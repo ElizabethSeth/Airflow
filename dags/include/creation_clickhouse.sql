@@ -16,3 +16,8 @@ CREATE TABLE IF NOT EXISTS card_data.bank_transactions
 )
 ENGINE = MergeTree
 ORDER BY Timestamp;
+
+
+
+
+
