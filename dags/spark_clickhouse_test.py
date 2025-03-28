@@ -41,7 +41,7 @@ default_args = {
     "retries": 0
 }
 
-ram = 25
+ram = 2
 
 
 

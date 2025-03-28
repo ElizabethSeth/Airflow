@@ -15,7 +15,7 @@ from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
 
 CLICKHOUSE_CONN_ID = 'clickhouse'
 PYSPARK_CONN_ID = "spark"
-ram = 25
+ram = 10
 
 
 
