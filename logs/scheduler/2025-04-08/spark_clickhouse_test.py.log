@@ -8559,3 +8559,89 @@
 [2025-04-08T20:39:51.955+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:39:51.955+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-04-08T20:39:51.977+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:39:51.976+0000] {dag.py:4180} INFO - Setting next_dagrun for spark_clickhouse_test to None, run_after=None
 [2025-04-08T20:39:52.010+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/spark_clickhouse_test.py took 1.770 seconds
+[2025-04-08T20:40:22.239+0000] {processor.py:186} INFO - Started process (PID=102) to work on /opt/airflow/dags/spark_clickhouse_test.py
+[2025-04-08T20:40:22.240+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/spark_clickhouse_test.py for tasks to queue
+[2025-04-08T20:40:22.243+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:40:22.243+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/spark_clickhouse_test.py
+[2025-04-08T20:40:23.218+0000] {processor.py:925} INFO - DAG(s) 'spark_clickhouse_test' retrieved from /opt/airflow/dags/spark_clickhouse_test.py
+[2025-04-08T20:40:23.244+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:40:23.244+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-08T20:40:23.260+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:40:23.259+0000] {dag.py:4180} INFO - Setting next_dagrun for spark_clickhouse_test to None, run_after=None
+[2025-04-08T20:40:23.279+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/spark_clickhouse_test.py took 1.048 seconds
+[2025-04-08T20:40:53.481+0000] {processor.py:186} INFO - Started process (PID=115) to work on /opt/airflow/dags/spark_clickhouse_test.py
+[2025-04-08T20:40:53.483+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/spark_clickhouse_test.py for tasks to queue
+[2025-04-08T20:40:53.486+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:40:53.485+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/spark_clickhouse_test.py
+[2025-04-08T20:40:54.442+0000] {processor.py:925} INFO - DAG(s) 'spark_clickhouse_test' retrieved from /opt/airflow/dags/spark_clickhouse_test.py
+[2025-04-08T20:40:54.472+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:40:54.471+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-08T20:40:54.487+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:40:54.486+0000] {dag.py:4180} INFO - Setting next_dagrun for spark_clickhouse_test to None, run_after=None
+[2025-04-08T20:40:54.503+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/spark_clickhouse_test.py took 1.030 seconds
+[2025-04-08T20:41:24.703+0000] {processor.py:186} INFO - Started process (PID=128) to work on /opt/airflow/dags/spark_clickhouse_test.py
+[2025-04-08T20:41:24.704+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/spark_clickhouse_test.py for tasks to queue
+[2025-04-08T20:41:24.707+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:41:24.707+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/spark_clickhouse_test.py
+[2025-04-08T20:41:25.667+0000] {processor.py:925} INFO - DAG(s) 'spark_clickhouse_test' retrieved from /opt/airflow/dags/spark_clickhouse_test.py
+[2025-04-08T20:41:25.692+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:41:25.691+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-08T20:41:25.706+0000] {logging_mixin.py:190} INFO - [2025-04-08T20:41:25.706+0000] {dag.py:4180} INFO - Setting next_dagrun for spark_clickhouse_test to None, run_after=None
+[2025-04-08T20:41:25.921+0000] {processor.py:964} ERROR - Error logging DAG warnings.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 962, in process_file
+    self.update_dag_warnings(dagbag=dagbag)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 694, in update_dag_warnings
+    return DagFileProcessor._validate_task_pools_and_update_dag_warnings(pool_dict, dag_ids)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 717, in _validate_task_pools_and_update_dag_warnings
+    stored_warnings = set(session.query(DagWarning).filter(DagWarning.dag_id.in_(dag_ids)).all())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2773, in all
+    return self._iter().all()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1717, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: SELECT dag_warning.dag_id AS dag_warning_dag_id, dag_warning.warning_type AS dag_warning_warning_type, dag_warning.message AS dag_warning_message, dag_warning.timestamp AS dag_warning_timestamp 
+FROM dag_warning 
+WHERE dag_warning.dag_id IN (%(dag_id_1_1)s)]
+[parameters: {'dag_id_1_1': 'spark_clickhouse_test'}]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-04-08T20:41:25.949+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/spark_clickhouse_test.py took 1.253 seconds
