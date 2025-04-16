@@ -1,0 +1,21 @@
+[2025-04-16T19:20:23.686+0000] {processor.py:186} INFO - Started process (PID=58) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-04-16T19:20:23.687+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-04-16T19:20:23.690+0000] {logging_mixin.py:190} INFO - [2025-04-16T19:20:23.689+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-04-16T19:20:23.880+0000] {processor.py:925} INFO - DAG(s) 'testing_clickhouse' retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-04-16T19:20:23.902+0000] {logging_mixin.py:190} INFO - [2025-04-16T19:20:23.902+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-16T19:20:23.916+0000] {logging_mixin.py:190} INFO - [2025-04-16T19:20:23.915+0000] {dag.py:4180} INFO - Setting next_dagrun for testing_clickhouse to None, run_after=None
+[2025-04-16T19:20:23.933+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.255 seconds
+[2025-04-16T19:20:55.140+0000] {processor.py:186} INFO - Started process (PID=76) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-04-16T19:20:55.140+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-04-16T19:20:55.142+0000] {logging_mixin.py:190} INFO - [2025-04-16T19:20:55.142+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-04-16T19:20:55.299+0000] {processor.py:925} INFO - DAG(s) 'testing_clickhouse' retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-04-16T19:20:55.320+0000] {logging_mixin.py:190} INFO - [2025-04-16T19:20:55.320+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-16T19:20:55.333+0000] {logging_mixin.py:190} INFO - [2025-04-16T19:20:55.333+0000] {dag.py:4180} INFO - Setting next_dagrun for testing_clickhouse to None, run_after=None
+[2025-04-16T19:20:55.491+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.356 seconds
+[2025-04-16T19:21:26.511+0000] {processor.py:186} INFO - Started process (PID=89) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-04-16T19:21:26.512+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-04-16T19:21:26.514+0000] {logging_mixin.py:190} INFO - [2025-04-16T19:21:26.514+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-04-16T19:21:26.674+0000] {processor.py:925} INFO - DAG(s) 'testing_clickhouse' retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-04-16T19:21:26.695+0000] {logging_mixin.py:190} INFO - [2025-04-16T19:21:26.694+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-16T19:21:26.844+0000] {logging_mixin.py:190} INFO - [2025-04-16T19:21:26.844+0000] {dag.py:4180} INFO - Setting next_dagrun for testing_clickhouse to None, run_after=None
+[2025-04-16T19:21:26.858+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.353 seconds
