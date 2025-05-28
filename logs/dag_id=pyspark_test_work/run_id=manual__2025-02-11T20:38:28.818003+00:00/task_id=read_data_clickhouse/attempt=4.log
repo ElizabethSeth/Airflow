@@ -1,0 +1,14 @@
+[2025-02-11T21:23:32.877+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-11T21:23:32.895+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pyspark_test_work.read_data_clickhouse manual__2025-02-11T20:38:28.818003+00:00 [queued]>
+[2025-02-11T21:23:32.905+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pyspark_test_work.read_data_clickhouse manual__2025-02-11T20:38:28.818003+00:00 [queued]>
+[2025-02-11T21:23:32.905+0000] {taskinstance.py:2866} INFO - Starting attempt 5 of 5
+[2025-02-11T21:23:32.921+0000] {taskinstance.py:2889} INFO - Executing <Task(SparkSubmitOperator): read_data_clickhouse> on 2025-02-11 20:38:28.818003+00:00
+[2025-02-11T21:23:32.931+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1468) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-11T21:23:32.932+0000] {standard_task_runner.py:72} INFO - Started process 1470 to run task
+[2025-02-11T21:23:32.934+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pyspark_test_work', 'read_data_clickhouse', 'manual__2025-02-11T20:38:28.818003+00:00', '--job-id', '330', '--raw', '--subdir', 'DAGS_FOLDER/bank_transactions.py', '--cfg-path', '/tmp/tmpopnf1g9g']
+[2025-02-11T21:23:32.936+0000] {standard_task_runner.py:105} INFO - Job 330: Subtask read_data_clickhouse
+[2025-02-11T21:23:50.754+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-02-11T21:23:50.772+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-11T21:23:50.773+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
