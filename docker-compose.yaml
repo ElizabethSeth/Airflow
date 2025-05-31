@@ -79,7 +79,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
-    - /home/evharthman:/opt/airflow
+    - /home/sinatrafrancoise:/opt/airflow
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
@@ -108,8 +108,8 @@ services:
       - "7077:7077"
       - "4040:4040"
     volumes:
-      - /home/evharthman:/opt/airflow
-      - /home/evharthman:/home/evharthman
+      - /home/sinatrafrancoise:/opt/airflow
+      - /home/sinatrafrancoise:/home/sinatrafrancoise
     networks:
       - airflow
     env_file: 
@@ -130,8 +130,8 @@ services:
     depends_on:
       - spark-master
     volumes:
-      - /home/evharthman:/opt/airflow
-      - /home/evharthman:/home/evharthman
+      - /home/sinatrafrancoise:/opt/airflow
+      - /home/sinatrafrancoise:/home/sinatrafrancoise
     networks:
       - airflow
     env_file: 
