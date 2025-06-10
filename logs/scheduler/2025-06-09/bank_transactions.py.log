@@ -21656,3 +21656,45 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'lib'
 [2025-06-09T21:08:26.508+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/bank_transactions.py
 [2025-06-09T21:08:26.532+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 0.562 seconds
+[2025-06-09T21:08:56.720+0000] {processor.py:186} INFO - Started process (PID=642) to work on /opt/airflow/dags/bank_transactions.py
+[2025-06-09T21:08:56.722+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/bank_transactions.py for tasks to queue
+[2025-06-09T21:08:56.725+0000] {logging_mixin.py:190} INFO - [2025-06-09T21:08:56.724+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/bank_transactions.py
+[2025-06-09T21:08:57.257+0000] {logging_mixin.py:190} INFO - [2025-06-09T21:08:57.256+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/bank_transactions.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bank_transactions.py", line 14, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-09T21:08:57.258+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/bank_transactions.py
+[2025-06-09T21:08:57.277+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 0.565 seconds
+[2025-06-09T21:09:27.528+0000] {processor.py:186} INFO - Started process (PID=655) to work on /opt/airflow/dags/bank_transactions.py
+[2025-06-09T21:09:27.529+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/bank_transactions.py for tasks to queue
+[2025-06-09T21:09:27.532+0000] {logging_mixin.py:190} INFO - [2025-06-09T21:09:27.532+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/bank_transactions.py
+[2025-06-09T21:09:28.078+0000] {logging_mixin.py:190} INFO - [2025-06-09T21:09:28.077+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/bank_transactions.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bank_transactions.py", line 14, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-09T21:09:28.079+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/bank_transactions.py
+[2025-06-09T21:09:28.099+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 0.579 seconds
+[2025-06-09T21:09:58.295+0000] {processor.py:186} INFO - Started process (PID=668) to work on /opt/airflow/dags/bank_transactions.py
+[2025-06-09T21:09:58.297+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/bank_transactions.py for tasks to queue
+[2025-06-09T21:09:58.300+0000] {logging_mixin.py:190} INFO - [2025-06-09T21:09:58.299+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/bank_transactions.py
+[2025-06-09T21:09:58.837+0000] {logging_mixin.py:190} INFO - [2025-06-09T21:09:58.835+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/bank_transactions.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bank_transactions.py", line 14, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-09T21:09:58.837+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/bank_transactions.py
+[2025-06-09T21:09:58.858+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/bank_transactions.py took 0.570 seconds
