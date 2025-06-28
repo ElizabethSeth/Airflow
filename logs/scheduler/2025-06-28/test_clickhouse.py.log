@@ -152,3 +152,857 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'lib'
 [2025-06-28T09:08:53.661+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
 [2025-06-28T09:08:53.681+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.039 seconds
+[2025-06-28T10:38:57.441+0000] {processor.py:186} INFO - Started process (PID=54) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:38:57.442+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:38:57.444+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:38:57.444+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:38:57.450+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:38:57.448+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:38:57.450+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:38:57.471+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.038 seconds
+[2025-06-28T10:39:27.623+0000] {processor.py:186} INFO - Started process (PID=68) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:39:27.627+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:39:27.629+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:39:27.629+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:39:27.633+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:39:27.632+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:39:27.633+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:39:27.648+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.031 seconds
+[2025-06-28T10:39:58.308+0000] {processor.py:186} INFO - Started process (PID=81) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:39:58.328+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:39:58.329+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:39:58.329+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:39:58.333+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:39:58.332+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:39:58.333+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:39:58.347+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.045 seconds
+[2025-06-28T10:40:29.030+0000] {processor.py:186} INFO - Started process (PID=94) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:40:29.031+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:40:29.032+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:40:29.032+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:40:29.035+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:40:29.035+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:40:29.036+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:40:29.050+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.026 seconds
+[2025-06-28T10:40:59.730+0000] {processor.py:186} INFO - Started process (PID=107) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:40:59.731+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:40:59.733+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:40:59.733+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:40:59.737+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:40:59.736+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:40:59.737+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:40:59.753+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:41:29.990+0000] {processor.py:186} INFO - Started process (PID=126) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:41:29.991+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:41:29.993+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:41:29.992+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:41:29.996+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:41:29.995+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:41:29.996+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:41:30.011+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.027 seconds
+[2025-06-28T10:42:00.249+0000] {processor.py:186} INFO - Started process (PID=139) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:42:00.279+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:42:00.281+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:42:00.281+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:42:00.284+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:42:00.283+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:42:00.284+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:42:00.301+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.058 seconds
+[2025-06-28T10:42:30.939+0000] {processor.py:186} INFO - Started process (PID=152) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:42:30.940+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:42:30.941+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:42:30.941+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:42:30.945+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:42:30.944+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:42:30.945+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:42:30.960+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.027 seconds
+[2025-06-28T10:43:01.617+0000] {processor.py:186} INFO - Started process (PID=165) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:43:01.618+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:43:01.620+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:43:01.620+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:43:01.623+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:43:01.622+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:43:01.623+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:43:01.638+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.027 seconds
+[2025-06-28T10:43:32.327+0000] {processor.py:186} INFO - Started process (PID=178) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:43:32.327+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:43:32.329+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:43:32.329+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:43:32.333+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:43:32.331+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:43:32.333+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:43:32.348+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:44:02.878+0000] {processor.py:186} INFO - Started process (PID=191) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:44:02.879+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:44:02.882+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:44:02.881+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:44:02.885+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:44:02.884+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:44:02.886+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:44:02.901+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:44:33.413+0000] {processor.py:186} INFO - Started process (PID=204) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:44:33.414+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:44:33.416+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:44:33.416+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:44:33.419+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:44:33.418+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:44:33.419+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:44:33.434+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:45:03.954+0000] {processor.py:186} INFO - Started process (PID=217) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:45:03.955+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:45:03.957+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:45:03.957+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:45:03.960+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:45:03.959+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:45:03.961+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:45:03.977+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:45:34.506+0000] {processor.py:186} INFO - Started process (PID=230) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:45:34.507+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:45:34.509+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:45:34.509+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:45:34.513+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:45:34.512+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:45:34.513+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:45:34.529+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:46:05.054+0000] {processor.py:186} INFO - Started process (PID=243) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:46:05.054+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:46:05.057+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:46:05.056+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:46:05.060+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:46:05.059+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:46:05.060+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:46:05.076+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:46:35.592+0000] {processor.py:186} INFO - Started process (PID=256) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:46:35.593+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:46:35.595+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:46:35.595+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:46:35.598+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:46:35.597+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:46:35.599+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:46:35.614+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:47:06.133+0000] {processor.py:186} INFO - Started process (PID=269) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:47:06.133+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:47:06.135+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:47:06.135+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:47:06.139+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:47:06.138+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:47:06.139+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:47:06.156+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.030 seconds
+[2025-06-28T10:47:36.680+0000] {processor.py:186} INFO - Started process (PID=282) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:47:36.682+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:47:36.684+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:47:36.684+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:47:36.688+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:47:36.686+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:47:36.688+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:47:36.704+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.031 seconds
+[2025-06-28T10:48:07.223+0000] {processor.py:186} INFO - Started process (PID=295) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:48:07.224+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:48:07.226+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:48:07.226+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:48:07.230+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:48:07.228+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:48:07.230+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:48:07.246+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:48:37.775+0000] {processor.py:186} INFO - Started process (PID=308) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:48:37.777+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:48:37.779+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:48:37.779+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:48:37.782+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:48:37.781+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:48:37.783+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:48:37.800+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.031 seconds
+[2025-06-28T10:49:08.324+0000] {processor.py:186} INFO - Started process (PID=321) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:49:08.325+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:49:08.327+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:49:08.326+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:49:08.330+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:49:08.329+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:49:08.331+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:49:08.346+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:49:38.872+0000] {processor.py:186} INFO - Started process (PID=334) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:49:38.873+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:49:38.875+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:49:38.875+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:49:38.879+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:49:38.878+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:49:38.879+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:49:38.895+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:50:09.442+0000] {processor.py:186} INFO - Started process (PID=347) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:50:09.442+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:50:09.444+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:50:09.444+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:50:09.448+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:50:09.447+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:50:09.448+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:50:09.464+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:50:39.982+0000] {processor.py:186} INFO - Started process (PID=360) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:50:39.984+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:50:39.986+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:50:39.986+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:50:39.989+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:50:39.988+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:50:39.990+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:50:40.006+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:51:10.526+0000] {processor.py:186} INFO - Started process (PID=373) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:51:10.526+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:51:10.529+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:51:10.528+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:51:10.532+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:51:10.531+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:51:10.532+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:51:10.548+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:51:41.070+0000] {processor.py:186} INFO - Started process (PID=386) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:51:41.071+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:51:41.073+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:51:41.073+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:51:41.076+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:51:41.075+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:51:41.077+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:51:41.092+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:52:11.625+0000] {processor.py:186} INFO - Started process (PID=399) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:52:11.625+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:52:11.627+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:52:11.627+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:52:11.631+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:52:11.629+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:52:11.631+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:52:11.646+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:52:42.160+0000] {processor.py:186} INFO - Started process (PID=412) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:52:42.262+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:52:42.264+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:52:42.264+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:52:42.268+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:52:42.266+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:52:42.268+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:52:42.284+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.131 seconds
+[2025-06-28T10:53:12.701+0000] {processor.py:186} INFO - Started process (PID=425) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:53:12.702+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:53:12.704+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:53:12.703+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:53:12.707+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:53:12.706+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:53:12.708+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:53:12.724+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:53:43.245+0000] {processor.py:186} INFO - Started process (PID=438) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:53:43.247+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:53:43.249+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:53:43.249+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:53:43.252+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:53:43.251+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:53:43.253+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:53:43.268+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.030 seconds
+[2025-06-28T10:54:13.796+0000] {processor.py:186} INFO - Started process (PID=451) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:54:13.796+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:54:13.798+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:54:13.798+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:54:13.802+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:54:13.801+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:54:13.803+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:54:13.818+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:54:44.342+0000] {processor.py:186} INFO - Started process (PID=465) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:54:44.343+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:54:44.345+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:54:44.345+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:54:44.349+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:54:44.347+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:54:44.349+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:54:44.364+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:55:14.888+0000] {processor.py:186} INFO - Started process (PID=478) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:55:14.888+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:55:14.891+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:55:14.890+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:55:14.894+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:55:14.893+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:55:14.895+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:55:14.910+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:55:45.432+0000] {processor.py:186} INFO - Started process (PID=491) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:55:45.433+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:55:45.435+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:55:45.435+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:55:45.439+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:55:45.437+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:55:45.439+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:55:45.455+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T10:56:15.986+0000] {processor.py:186} INFO - Started process (PID=504) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:56:15.986+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:56:15.988+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:56:15.988+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:56:15.992+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:56:15.991+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:56:15.992+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:56:16.007+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:56:46.543+0000] {processor.py:186} INFO - Started process (PID=517) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:56:46.544+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:56:46.547+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:56:46.546+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:56:46.550+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:56:46.549+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:56:46.551+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:56:46.572+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.036 seconds
+[2025-06-28T10:57:16.651+0000] {processor.py:186} INFO - Started process (PID=530) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:57:16.651+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:57:16.654+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:57:16.653+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:57:16.657+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:57:16.656+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:57:16.658+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:57:16.673+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.030 seconds
+[2025-06-28T10:57:47.218+0000] {processor.py:186} INFO - Started process (PID=543) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:57:47.220+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:57:47.223+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:57:47.222+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:57:47.228+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:57:47.226+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:57:47.228+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:57:47.253+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.043 seconds
+[2025-06-28T10:58:17.812+0000] {processor.py:186} INFO - Started process (PID=556) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:58:17.813+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:58:17.816+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:58:17.815+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:58:17.820+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:58:17.819+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:58:17.821+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:58:17.847+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.044 seconds
+[2025-06-28T10:58:48.403+0000] {processor.py:186} INFO - Started process (PID=569) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:58:48.405+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:58:48.408+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:58:48.407+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:58:48.412+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:58:48.411+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:58:48.413+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:58:48.431+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.037 seconds
+[2025-06-28T10:59:18.974+0000] {processor.py:186} INFO - Started process (PID=582) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:59:18.975+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:59:18.978+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:59:18.977+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:59:18.982+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:59:18.980+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:59:18.982+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:59:18.996+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.028 seconds
+[2025-06-28T10:59:49.533+0000] {processor.py:186} INFO - Started process (PID=595) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:59:49.578+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T10:59:49.580+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:59:49.580+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:59:49.584+0000] {logging_mixin.py:190} INFO - [2025-06-28T10:59:49.583+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T10:59:49.584+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T10:59:49.599+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.073 seconds
+[2025-06-28T11:00:20.138+0000] {processor.py:186} INFO - Started process (PID=608) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:00:20.139+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:00:20.141+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:00:20.141+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:00:20.145+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:00:20.143+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:00:20.145+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:00:20.162+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T11:00:50.679+0000] {processor.py:186} INFO - Started process (PID=621) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:00:50.727+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:00:50.730+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:00:50.730+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:00:50.734+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:00:50.733+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:00:50.735+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:00:50.749+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.077 seconds
+[2025-06-28T11:01:21.230+0000] {processor.py:186} INFO - Started process (PID=634) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:01:21.231+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:01:21.233+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:01:21.233+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:01:21.236+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:01:21.235+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:01:21.237+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:01:21.252+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T11:01:51.787+0000] {processor.py:186} INFO - Started process (PID=647) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:01:51.789+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:01:51.791+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:01:51.791+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:01:51.795+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:01:51.794+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:01:51.795+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:01:51.811+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.031 seconds
+[2025-06-28T11:02:22.359+0000] {processor.py:186} INFO - Started process (PID=660) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:02:22.360+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:02:22.362+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:02:22.362+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:02:22.366+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:02:22.364+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:02:22.366+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:02:22.383+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.030 seconds
+[2025-06-28T11:02:52.911+0000] {processor.py:186} INFO - Started process (PID=673) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:02:52.912+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:02:52.914+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:02:52.914+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:02:52.918+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:02:52.917+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:02:52.918+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:02:52.934+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.031 seconds
+[2025-06-28T11:03:23.456+0000] {processor.py:186} INFO - Started process (PID=685) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:03:23.457+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:03:23.459+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:03:23.459+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:03:23.463+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:03:23.462+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:03:23.464+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:03:23.480+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.031 seconds
+[2025-06-28T11:03:54.005+0000] {processor.py:186} INFO - Started process (PID=698) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:03:54.006+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:03:54.008+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:03:54.008+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:03:54.012+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:03:54.011+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:03:54.013+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:03:54.029+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.030 seconds
+[2025-06-28T11:04:24.582+0000] {processor.py:186} INFO - Started process (PID=711) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:04:24.582+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:04:24.584+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:04:24.584+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:04:24.588+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:04:24.587+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:04:24.588+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:04:24.607+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.033 seconds
+[2025-06-28T11:04:55.152+0000] {processor.py:186} INFO - Started process (PID=724) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:04:55.154+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:04:55.156+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:04:55.155+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:04:55.159+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:04:55.158+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:04:55.160+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:04:55.175+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.030 seconds
+[2025-06-28T11:05:25.703+0000] {processor.py:186} INFO - Started process (PID=737) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:05:25.703+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:05:25.706+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:05:25.705+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:05:25.709+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:05:25.708+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:05:25.710+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:05:25.725+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T11:05:56.314+0000] {processor.py:186} INFO - Started process (PID=750) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:05:56.327+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:05:56.329+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:05:56.329+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:05:56.333+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:05:56.332+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:05:56.333+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:05:56.349+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.042 seconds
+[2025-06-28T11:06:26.380+0000] {processor.py:186} INFO - Started process (PID=763) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:06:26.381+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:06:26.383+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:06:26.383+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:06:26.386+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:06:26.385+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:06:26.387+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:06:26.402+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T11:06:56.929+0000] {processor.py:186} INFO - Started process (PID=776) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:06:56.979+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:06:56.981+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:06:56.981+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:06:56.985+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:06:56.984+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:06:56.985+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:06:57.000+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.077 seconds
+[2025-06-28T11:07:27.535+0000] {processor.py:186} INFO - Started process (PID=789) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:07:27.536+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:07:27.538+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:07:27.538+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:07:27.541+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:07:27.540+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:07:27.542+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:07:27.557+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T11:07:58.075+0000] {processor.py:186} INFO - Started process (PID=802) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:07:58.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:07:58.132+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:07:58.131+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:07:58.136+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:07:58.134+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:07:58.136+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:07:58.152+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.084 seconds
+[2025-06-28T11:08:28.617+0000] {processor.py:186} INFO - Started process (PID=816) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:08:28.619+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:08:28.621+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:08:28.621+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:08:28.625+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:08:28.623+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:08:28.625+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:08:28.640+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
+[2025-06-28T11:08:59.189+0000] {processor.py:186} INFO - Started process (PID=829) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:08:59.190+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:08:59.192+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:08:59.192+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:08:59.196+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:08:59.195+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:08:59.197+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:08:59.212+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.030 seconds
+[2025-06-28T11:09:29.738+0000] {processor.py:186} INFO - Started process (PID=842) to work on /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:09:29.739+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test_clickhouse.py for tasks to queue
+[2025-06-28T11:09:29.741+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:09:29.741+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:09:29.745+0000] {logging_mixin.py:190} INFO - [2025-06-28T11:09:29.743+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/test_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/test_clickhouse.py", line 5, in <module>
+    from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+ModuleNotFoundError: No module named 'lib'
+[2025-06-28T11:09:29.745+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/test_clickhouse.py
+[2025-06-28T11:09:29.760+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test_clickhouse.py took 0.029 seconds
