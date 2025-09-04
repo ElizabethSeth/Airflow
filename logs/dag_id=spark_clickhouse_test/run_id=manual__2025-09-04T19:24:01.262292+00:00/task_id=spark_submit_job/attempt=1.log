@@ -1,0 +1,791 @@
+[2025-09-04T19:24:02.754+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-09-04T19:24:02.772+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_clickhouse_test.spark_submit_job manual__2025-09-04T19:24:01.262292+00:00 [queued]>
+[2025-09-04T19:24:02.783+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_clickhouse_test.spark_submit_job manual__2025-09-04T19:24:01.262292+00:00 [queued]>
+[2025-09-04T19:24:02.784+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-09-04T19:24:02.797+0000] {taskinstance.py:2889} INFO - Executing <Task(SparkSubmitOperator): spark_submit_job> on 2025-09-04 19:24:01.262292+00:00
+[2025-09-04T19:24:02.805+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=358) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-09-04T19:24:02.806+0000] {standard_task_runner.py:72} INFO - Started process 360 to run task
+[2025-09-04T19:24:02.807+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'spark_clickhouse_test', 'spark_submit_job', 'manual__2025-09-04T19:24:01.262292+00:00', '--job-id', '138', '--raw', '--subdir', 'DAGS_FOLDER/spark_clickhouse_test.py', '--cfg-path', '/tmp/tmpiyf1080w']
+[2025-09-04T19:24:02.810+0000] {standard_task_runner.py:105} INFO - Job 138: Subtask spark_submit_job
+[2025-09-04T19:24:02.863+0000] {task_command.py:467} INFO - Running <TaskInstance: spark_clickhouse_test.spark_submit_job manual__2025-09-04T19:24:01.262292+00:00 [running]> on host 1d7a6825dc2f
+[2025-09-04T19:24:02.948+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Smalch' AIRFLOW_CTX_DAG_ID='spark_clickhouse_test' AIRFLOW_CTX_TASK_ID='spark_submit_job' AIRFLOW_CTX_EXECUTION_DATE='2025-09-04T19:24:01.262292+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-04T19:24:01.262292+00:00'
+[2025-09-04T19:24:02.949+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-09-04T19:24:02.963+0000] {base.py:84} INFO - Retrieving connection 'spark'
+[2025-09-04T19:24:02.964+0000] {spark_submit.py:327} ERROR - Failed to decode base64 keytab: Incorrect padding
+[2025-09-04T19:24:02.964+0000] {spark_submit.py:304} INFO - Could not load connection string spark, defaulting to spark://spark-master:7077
+[2025-09-04T19:24:02.969+0000] {spark_submit.py:473} INFO - Spark-Submit cmd: spark-submit --master spark://spark-master:7077 --packages com.clickhouse.spark:clickhouse-spark-runtime-3.5_2.12:0.8.0,com.clickhouse:clickhouse-jdbc:0.7.0,com.clickhouse:clickhouse-client:0.7.0,com.clickhouse:clickhouse-http-client:0.7.0,org.apache.httpcomponents.client5:httpclient5:5.3.1,org.apache.sedona:sedona-spark-3.5_2.12:1.7.0,org.datasyslab:geotools-wrapper:1.7.0-28.5,uk.co.gresearch.spark:spark-extension_2.12:2.11.0-3.4 --executor-memory 40g --driver-memory 40g --name arrow-spark --verbose --deploy-mode client dags/spark_app/spark_1.py
+[2025-09-04T19:24:03.313+0000] {spark_submit.py:634} INFO - WARNING: Using incubator modules: jdk.incubator.vector
+[2025-09-04T19:24:04.756+0000] {spark_submit.py:634} INFO - Parsed arguments:
+[2025-09-04T19:24:04.756+0000] {spark_submit.py:634} INFO - master                  spark://spark-master:7077
+[2025-09-04T19:24:04.756+0000] {spark_submit.py:634} INFO - remote                  null
+[2025-09-04T19:24:04.756+0000] {spark_submit.py:634} INFO - deployMode              client
+[2025-09-04T19:24:04.757+0000] {spark_submit.py:634} INFO - executorMemory          40g
+[2025-09-04T19:24:04.757+0000] {spark_submit.py:634} INFO - executorCores           null
+[2025-09-04T19:24:04.757+0000] {spark_submit.py:634} INFO - totalExecutorCores      null
+[2025-09-04T19:24:04.757+0000] {spark_submit.py:634} INFO - propertiesFile          null
+[2025-09-04T19:24:04.758+0000] {spark_submit.py:634} INFO - driverMemory            40g
+[2025-09-04T19:24:04.758+0000] {spark_submit.py:634} INFO - driverCores             null
+[2025-09-04T19:24:04.758+0000] {spark_submit.py:634} INFO - driverExtraClassPath    null
+[2025-09-04T19:24:04.758+0000] {spark_submit.py:634} INFO - driverExtraLibraryPath  null
+[2025-09-04T19:24:04.758+0000] {spark_submit.py:634} INFO - driverExtraJavaOptions  null
+[2025-09-04T19:24:04.759+0000] {spark_submit.py:634} INFO - supervise               false
+[2025-09-04T19:24:04.759+0000] {spark_submit.py:634} INFO - queue                   null
+[2025-09-04T19:24:04.759+0000] {spark_submit.py:634} INFO - numExecutors            null
+[2025-09-04T19:24:04.759+0000] {spark_submit.py:634} INFO - files                   null
+[2025-09-04T19:24:04.759+0000] {spark_submit.py:634} INFO - pyFiles                 null
+[2025-09-04T19:24:04.760+0000] {spark_submit.py:634} INFO - archives                null
+[2025-09-04T19:24:04.760+0000] {spark_submit.py:634} INFO - mainClass               null
+[2025-09-04T19:24:04.760+0000] {spark_submit.py:634} INFO - primaryResource         file:/opt/***/dags/spark_app/spark_1.py
+[2025-09-04T19:24:04.760+0000] {spark_submit.py:634} INFO - name                    arrow-spark
+[2025-09-04T19:24:04.761+0000] {spark_submit.py:634} INFO - childArgs               []
+[2025-09-04T19:24:04.761+0000] {spark_submit.py:634} INFO - jars                    null
+[2025-09-04T19:24:04.761+0000] {spark_submit.py:634} INFO - packages                com.clickhouse.spark:clickhouse-spark-runtime-3.5_2.12:0.8.0,com.clickhouse:clickhouse-jdbc:0.7.0,com.clickhouse:clickhouse-client:0.7.0,com.clickhouse:clickhouse-http-client:0.7.0,org.apache.httpcomponents.client5:httpclient5:5.3.1,org.apache.sedona:sedona-spark-3.5_2.12:1.7.0,org.datasyslab:geotools-wrapper:1.7.0-28.5,uk.co.gresearch.spark:spark-extension_2.12:2.11.0-3.4
+[2025-09-04T19:24:04.761+0000] {spark_submit.py:634} INFO - packagesExclusions      null
+[2025-09-04T19:24:04.761+0000] {spark_submit.py:634} INFO - repositories            null
+[2025-09-04T19:24:04.762+0000] {spark_submit.py:634} INFO - verbose                 true
+[2025-09-04T19:24:04.762+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:24:04.762+0000] {spark_submit.py:634} INFO - Spark properties used, including those specified through
+[2025-09-04T19:24:04.762+0000] {spark_submit.py:634} INFO - --conf and those from the properties file null:
+[2025-09-04T19:24:04.762+0000] {spark_submit.py:634} INFO - (spark.driver.memory,40g)
+[2025-09-04T19:24:04.763+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:24:04.763+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:24:04.860+0000] {spark_submit.py:634} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-09-04T19:24:04.945+0000] {spark_submit.py:634} INFO - Ivy Default Cache set to: /home/***/.ivy2.5.2/cache
+[2025-09-04T19:24:04.946+0000] {spark_submit.py:634} INFO - The jars for the packages stored in: /home/***/.ivy2.5.2/jars
+[2025-09-04T19:24:04.950+0000] {spark_submit.py:634} INFO - com.clickhouse.spark#clickhouse-spark-runtime-3.5_2.12 added as a dependency
+[2025-09-04T19:24:04.951+0000] {spark_submit.py:634} INFO - com.clickhouse#clickhouse-jdbc added as a dependency
+[2025-09-04T19:24:04.951+0000] {spark_submit.py:634} INFO - com.clickhouse#clickhouse-client added as a dependency
+[2025-09-04T19:24:04.952+0000] {spark_submit.py:634} INFO - com.clickhouse#clickhouse-http-client added as a dependency
+[2025-09-04T19:24:04.952+0000] {spark_submit.py:634} INFO - org.apache.httpcomponents.client5#httpclient5 added as a dependency
+[2025-09-04T19:24:04.952+0000] {spark_submit.py:634} INFO - org.apache.sedona#sedona-spark-3.5_2.12 added as a dependency
+[2025-09-04T19:24:04.953+0000] {spark_submit.py:634} INFO - org.datasyslab#geotools-wrapper added as a dependency
+[2025-09-04T19:24:04.953+0000] {spark_submit.py:634} INFO - uk.co.gresearch.spark#spark-extension_2.12 added as a dependency
+[2025-09-04T19:24:04.953+0000] {spark_submit.py:634} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-3a9a8b89-e767-4f06-b6c6-cf374b42f43c;1.0
+[2025-09-04T19:24:04.954+0000] {spark_submit.py:634} INFO - confs: [default]
+[2025-09-04T19:24:05.059+0000] {spark_submit.py:634} INFO - found com.clickhouse.spark#clickhouse-spark-runtime-3.5_2.12;0.8.0 in central
+[2025-09-04T19:24:05.084+0000] {spark_submit.py:634} INFO - found com.clickhouse#clickhouse-jdbc;0.7.0 in central
+[2025-09-04T19:24:05.108+0000] {spark_submit.py:634} INFO - found com.clickhouse#clickhouse-client;0.7.0 in central
+[2025-09-04T19:24:05.127+0000] {spark_submit.py:634} INFO - found com.clickhouse#clickhouse-data;0.7.0 in central
+[2025-09-04T19:24:05.152+0000] {spark_submit.py:634} INFO - found com.clickhouse#clickhouse-http-client;0.7.0 in central
+[2025-09-04T19:24:05.182+0000] {spark_submit.py:634} INFO - found org.apache.httpcomponents.client5#httpclient5;5.3.1 in central
+[2025-09-04T19:24:05.201+0000] {spark_submit.py:634} INFO - found org.apache.httpcomponents.core5#httpcore5;5.2.4 in central
+[2025-09-04T19:24:05.220+0000] {spark_submit.py:634} INFO - found org.apache.httpcomponents.core5#httpcore5-h2;5.2.4 in central
+[2025-09-04T19:24:05.237+0000] {spark_submit.py:634} INFO - found org.slf4j#slf4j-api;1.7.36 in central
+[2025-09-04T19:24:05.257+0000] {spark_submit.py:634} INFO - found org.apache.sedona#sedona-spark-3.5_2.12;1.7.0 in central
+[2025-09-04T19:24:05.279+0000] {spark_submit.py:634} INFO - found org.apache.sedona#sedona-common;1.7.0 in central
+[2025-09-04T19:24:05.304+0000] {spark_submit.py:634} INFO - found org.apache.commons#commons-math3;3.6.1 in central
+[2025-09-04T19:24:05.318+0000] {spark_submit.py:634} INFO - found org.locationtech.jts#jts-core;1.20.0 in central
+[2025-09-04T19:24:05.333+0000] {spark_submit.py:634} INFO - found org.wololo#jts2geojson;0.16.1 in central
+[2025-09-04T19:24:05.349+0000] {spark_submit.py:634} INFO - found org.locationtech.spatial4j#spatial4j;0.8 in central
+[2025-09-04T19:24:05.362+0000] {spark_submit.py:634} INFO - found com.google.geometry#s2-geometry;2.0.0 in central
+[2025-09-04T19:24:05.376+0000] {spark_submit.py:634} INFO - found com.google.guava#guava;25.1-jre in central
+[2025-09-04T19:24:05.388+0000] {spark_submit.py:634} INFO - found com.google.code.findbugs#jsr305;3.0.2 in central
+[2025-09-04T19:24:05.401+0000] {spark_submit.py:634} INFO - found org.checkerframework#checker-qual;2.0.0 in central
+[2025-09-04T19:24:05.413+0000] {spark_submit.py:634} INFO - found com.google.errorprone#error_prone_annotations;2.1.3 in central
+[2025-09-04T19:24:05.425+0000] {spark_submit.py:634} INFO - found com.google.j2objc#j2objc-annotations;1.1 in central
+[2025-09-04T19:24:05.455+0000] {spark_submit.py:634} INFO - found org.codehaus.mojo#animal-sniffer-annotations;1.14 in central
+[2025-09-04T19:24:05.469+0000] {spark_submit.py:634} INFO - found com.uber#h3;4.1.1 in central
+[2025-09-04T19:24:05.496+0000] {spark_submit.py:634} INFO - found net.sf.geographiclib#GeographicLib-Java;1.52 in central
+[2025-09-04T19:24:05.513+0000] {spark_submit.py:634} INFO - found com.github.ben-manes.caffeine#caffeine;2.9.2 in central
+[2025-09-04T19:24:05.528+0000] {spark_submit.py:634} INFO - found org.checkerframework#checker-qual;3.10.0 in central
+[2025-09-04T19:24:05.538+0000] {spark_submit.py:634} INFO - found com.google.errorprone#error_prone_annotations;2.5.1 in central
+[2025-09-04T19:24:05.555+0000] {spark_submit.py:634} INFO - found org.apache.sedona#sedona-spark-common-3.5_2.12;1.7.0 in central
+[2025-09-04T19:24:05.568+0000] {spark_submit.py:634} INFO - found org.xerial#sqlite-jdbc;3.41.2.2 in central
+[2025-09-04T19:24:05.578+0000] {spark_submit.py:634} INFO - found commons-lang#commons-lang;2.6 in central
+[2025-09-04T19:24:05.590+0000] {spark_submit.py:634} INFO - found graphframes#graphframes;0.8.3-spark3.5-s_2.12 in spark-packages
+[2025-09-04T19:24:05.607+0000] {spark_submit.py:634} INFO - found org.scala-lang.modules#scala-collection-compat_2.12;2.5.0 in central
+[2025-09-04T19:24:05.623+0000] {spark_submit.py:634} INFO - found org.beryx#awt-color-factory;1.0.0 in central
+[2025-09-04T19:24:05.638+0000] {spark_submit.py:634} INFO - found org.datasyslab#geotools-wrapper;1.7.0-28.5 in central
+[2025-09-04T19:24:05.647+0000] {spark_submit.py:634} INFO - found uk.co.gresearch.spark#spark-extension_2.12;2.11.0-3.4 in central
+[2025-09-04T19:24:05.656+0000] {spark_submit.py:634} INFO - found com.github.scopt#scopt_2.12;4.1.0 in central
+[2025-09-04T19:24:05.696+0000] {spark_submit.py:634} INFO - :: resolution report :: resolve 718ms :: artifacts dl 25ms
+[2025-09-04T19:24:05.696+0000] {spark_submit.py:634} INFO - :: modules in use:
+[2025-09-04T19:24:05.697+0000] {spark_submit.py:634} INFO - com.clickhouse#clickhouse-client;0.7.0 from central in [default]
+[2025-09-04T19:24:05.697+0000] {spark_submit.py:634} INFO - com.clickhouse#clickhouse-data;0.7.0 from central in [default]
+[2025-09-04T19:24:05.698+0000] {spark_submit.py:634} INFO - com.clickhouse#clickhouse-http-client;0.7.0 from central in [default]
+[2025-09-04T19:24:05.698+0000] {spark_submit.py:634} INFO - com.clickhouse#clickhouse-jdbc;0.7.0 from central in [default]
+[2025-09-04T19:24:05.698+0000] {spark_submit.py:634} INFO - com.clickhouse.spark#clickhouse-spark-runtime-3.5_2.12;0.8.0 from central in [default]
+[2025-09-04T19:24:05.699+0000] {spark_submit.py:634} INFO - com.github.ben-manes.caffeine#caffeine;2.9.2 from central in [default]
+[2025-09-04T19:24:05.699+0000] {spark_submit.py:634} INFO - com.github.scopt#scopt_2.12;4.1.0 from central in [default]
+[2025-09-04T19:24:05.699+0000] {spark_submit.py:634} INFO - com.google.code.findbugs#jsr305;3.0.2 from central in [default]
+[2025-09-04T19:24:05.700+0000] {spark_submit.py:634} INFO - com.google.errorprone#error_prone_annotations;2.5.1 from central in [default]
+[2025-09-04T19:24:05.700+0000] {spark_submit.py:634} INFO - com.google.geometry#s2-geometry;2.0.0 from central in [default]
+[2025-09-04T19:24:05.700+0000] {spark_submit.py:634} INFO - com.google.guava#guava;25.1-jre from central in [default]
+[2025-09-04T19:24:05.701+0000] {spark_submit.py:634} INFO - com.google.j2objc#j2objc-annotations;1.1 from central in [default]
+[2025-09-04T19:24:05.701+0000] {spark_submit.py:634} INFO - com.uber#h3;4.1.1 from central in [default]
+[2025-09-04T19:24:05.702+0000] {spark_submit.py:634} INFO - commons-lang#commons-lang;2.6 from central in [default]
+[2025-09-04T19:24:05.702+0000] {spark_submit.py:634} INFO - graphframes#graphframes;0.8.3-spark3.5-s_2.12 from spark-packages in [default]
+[2025-09-04T19:24:05.702+0000] {spark_submit.py:634} INFO - net.sf.geographiclib#GeographicLib-Java;1.52 from central in [default]
+[2025-09-04T19:24:05.703+0000] {spark_submit.py:634} INFO - org.apache.commons#commons-math3;3.6.1 from central in [default]
+[2025-09-04T19:24:05.703+0000] {spark_submit.py:634} INFO - org.apache.httpcomponents.client5#httpclient5;5.3.1 from central in [default]
+[2025-09-04T19:24:05.703+0000] {spark_submit.py:634} INFO - org.apache.httpcomponents.core5#httpcore5;5.2.4 from central in [default]
+[2025-09-04T19:24:05.704+0000] {spark_submit.py:634} INFO - org.apache.httpcomponents.core5#httpcore5-h2;5.2.4 from central in [default]
+[2025-09-04T19:24:05.704+0000] {spark_submit.py:634} INFO - org.apache.sedona#sedona-common;1.7.0 from central in [default]
+[2025-09-04T19:24:05.705+0000] {spark_submit.py:634} INFO - org.apache.sedona#sedona-spark-3.5_2.12;1.7.0 from central in [default]
+[2025-09-04T19:24:05.705+0000] {spark_submit.py:634} INFO - org.apache.sedona#sedona-spark-common-3.5_2.12;1.7.0 from central in [default]
+[2025-09-04T19:24:05.705+0000] {spark_submit.py:634} INFO - org.beryx#awt-color-factory;1.0.0 from central in [default]
+[2025-09-04T19:24:05.706+0000] {spark_submit.py:634} INFO - org.checkerframework#checker-qual;3.10.0 from central in [default]
+[2025-09-04T19:24:05.706+0000] {spark_submit.py:634} INFO - org.codehaus.mojo#animal-sniffer-annotations;1.14 from central in [default]
+[2025-09-04T19:24:05.706+0000] {spark_submit.py:634} INFO - org.datasyslab#geotools-wrapper;1.7.0-28.5 from central in [default]
+[2025-09-04T19:24:05.707+0000] {spark_submit.py:634} INFO - org.locationtech.jts#jts-core;1.20.0 from central in [default]
+[2025-09-04T19:24:05.707+0000] {spark_submit.py:634} INFO - org.locationtech.spatial4j#spatial4j;0.8 from central in [default]
+[2025-09-04T19:24:05.707+0000] {spark_submit.py:634} INFO - org.scala-lang.modules#scala-collection-compat_2.12;2.5.0 from central in [default]
+[2025-09-04T19:24:05.708+0000] {spark_submit.py:634} INFO - org.slf4j#slf4j-api;1.7.36 from central in [default]
+[2025-09-04T19:24:05.708+0000] {spark_submit.py:634} INFO - org.wololo#jts2geojson;0.16.1 from central in [default]
+[2025-09-04T19:24:05.709+0000] {spark_submit.py:634} INFO - org.xerial#sqlite-jdbc;3.41.2.2 from central in [default]
+[2025-09-04T19:24:05.709+0000] {spark_submit.py:634} INFO - uk.co.gresearch.spark#spark-extension_2.12;2.11.0-3.4 from central in [default]
+[2025-09-04T19:24:05.709+0000] {spark_submit.py:634} INFO - :: evicted modules:
+[2025-09-04T19:24:05.710+0000] {spark_submit.py:634} INFO - com.clickhouse#clickhouse-http-client;0.7.0-SNAPSHOT by [com.clickhouse#clickhouse-http-client;0.7.0] in [default]
+[2025-09-04T19:24:05.710+0000] {spark_submit.py:634} INFO - org.checkerframework#checker-qual;2.0.0 by [org.checkerframework#checker-qual;3.10.0] in [default]
+[2025-09-04T19:24:05.710+0000] {spark_submit.py:634} INFO - com.google.errorprone#error_prone_annotations;2.1.3 by [com.google.errorprone#error_prone_annotations;2.5.1] in [default]
+[2025-09-04T19:24:05.711+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2025-09-04T19:24:05.711+0000] {spark_submit.py:634} INFO - |                  |            modules            ||   artifacts   |
+[2025-09-04T19:24:05.711+0000] {spark_submit.py:634} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-09-04T19:24:05.712+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2025-09-04T19:24:05.712+0000] {spark_submit.py:634} INFO - |      default     |   37  |   0   |   0   |   3   ||   34  |   0   |
+[2025-09-04T19:24:05.712+0000] {spark_submit.py:634} INFO - ---------------------------------------------------------------------
+[2025-09-04T19:24:05.714+0000] {spark_submit.py:634} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-3a9a8b89-e767-4f06-b6c6-cf374b42f43c
+[2025-09-04T19:24:05.715+0000] {spark_submit.py:634} INFO - confs: [default]
+[2025-09-04T19:24:05.727+0000] {spark_submit.py:634} INFO - 0 artifacts copied, 34 already retrieved (0kB/13ms)
+[2025-09-04T19:24:05.957+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-09-04T19:24:06.169+0000] {spark_submit.py:634} INFO - Main class:
+[2025-09-04T19:24:06.170+0000] {spark_submit.py:634} INFO - org.apache.spark.deploy.PythonRunner
+[2025-09-04T19:24:06.170+0000] {spark_submit.py:634} INFO - Arguments:
+[2025-09-04T19:24:06.171+0000] {spark_submit.py:634} INFO - file:/opt/***/dags/spark_app/spark_1.py
+[2025-09-04T19:24:06.171+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-jdbc-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-client-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-http-client-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar,file:///home/***/.ivy2.5.2/jars/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-data-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar,file:///home/***/.ivy2.5.2/jars/org.slf4j_slf4j-api-1.7.36.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-common-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.locationtech.jts_jts-core-1.20.0.jar,file:///home/***/.ivy2.5.2/jars/org.wololo_jts2geojson-0.16.1.jar,file:///home/***/.ivy2.5.2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.commons_commons-math3-3.6.1.jar,file:///home/***/.ivy2.5.2/jars/org.locationtech.spatial4j_spatial4j-0.8.jar,file:///home/***/.ivy2.5.2/jars/com.google.geometry_s2-geometry-2.0.0.jar,file:///home/***/.ivy2.5.2/jars/com.uber_h3-4.1.1.jar,file:///home/***/.ivy2.5.2/jars/net.sf.geographiclib_GeographicLib-Java-1.52.jar,file:///home/***/.ivy2.5.2/jars/com.github.ben-manes.caffeine_caffeine-2.9.2.jar,file:///home/***/.ivy2.5.2/jars/com.google.guava_guava-25.1-jre.jar,file:///home/***/.ivy2.5.2/jars/com.google.code.findbugs_jsr305-3.0.2.jar,file:///home/***/.ivy2.5.2/jars/com.google.j2objc_j2objc-annotations-1.1.jar,file:///home/***/.ivy2.5.2/jars/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar,file:///home/***/.ivy2.5.2/jars/org.checkerframework_checker-qual-3.10.0.jar,file:///home/***/.ivy2.5.2/jars/com.google.errorprone_error_prone_annotations-2.5.1.jar,file:///home/***/.ivy2.5.2/jars/org.xerial_sqlite-jdbc-3.41.2.2.jar,file:///home/***/.ivy2.5.2/jars/commons-lang_commons-lang-2.6.jar,file:///home/***/.ivy2.5.2/jars/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar,file:///home/***/.ivy2.5.2/jars/org.beryx_awt-color-factory-1.0.0.jar,file:///home/***/.ivy2.5.2/jars/com.github.scopt_scopt_2.12-4.1.0.jar
+[2025-09-04T19:24:06.173+0000] {spark_submit.py:634} INFO - Spark config:
+[2025-09-04T19:24:06.174+0000] {spark_submit.py:634} INFO - (spark.app.name,arrow-spark)
+[2025-09-04T19:24:06.174+0000] {spark_submit.py:634} INFO - (spark.app.submitTime,1757013846142)
+[2025-09-04T19:24:06.175+0000] {spark_submit.py:634} INFO - (spark.driver.memory,40g)
+[2025-09-04T19:24:06.175+0000] {spark_submit.py:634} INFO - (spark.executor.memory,40g)
+[2025-09-04T19:24:06.175+0000] {spark_submit.py:634} INFO - (spark.files,file:///home/***/.ivy2.5.2/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-jdbc-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-client-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-http-client-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar,file:///home/***/.ivy2.5.2/jars/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-data-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar,file:///home/***/.ivy2.5.2/jars/org.slf4j_slf4j-api-1.7.36.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-common-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.locationtech.jts_jts-core-1.20.0.jar,file:///home/***/.ivy2.5.2/jars/org.wololo_jts2geojson-0.16.1.jar,file:///home/***/.ivy2.5.2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.commons_commons-math3-3.6.1.jar,file:///home/***/.ivy2.5.2/jars/org.locationtech.spatial4j_spatial4j-0.8.jar,file:///home/***/.ivy2.5.2/jars/com.google.geometry_s2-geometry-2.0.0.jar,file:///home/***/.ivy2.5.2/jars/com.uber_h3-4.1.1.jar,file:///home/***/.ivy2.5.2/jars/net.sf.geographiclib_GeographicLib-Java-1.52.jar,file:///home/***/.ivy2.5.2/jars/com.github.ben-manes.caffeine_caffeine-2.9.2.jar,file:///home/***/.ivy2.5.2/jars/com.google.guava_guava-25.1-jre.jar,file:///home/***/.ivy2.5.2/jars/com.google.code.findbugs_jsr305-3.0.2.jar,file:///home/***/.ivy2.5.2/jars/com.google.j2objc_j2objc-annotations-1.1.jar,file:///home/***/.ivy2.5.2/jars/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar,file:///home/***/.ivy2.5.2/jars/org.checkerframework_checker-qual-3.10.0.jar,file:///home/***/.ivy2.5.2/jars/com.google.errorprone_error_prone_annotations-2.5.1.jar,file:///home/***/.ivy2.5.2/jars/org.xerial_sqlite-jdbc-3.41.2.2.jar,file:///home/***/.ivy2.5.2/jars/commons-lang_commons-lang-2.6.jar,file:///home/***/.ivy2.5.2/jars/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar,file:///home/***/.ivy2.5.2/jars/org.beryx_awt-color-factory-1.0.0.jar,file:///home/***/.ivy2.5.2/jars/com.github.scopt_scopt_2.12-4.1.0.jar)
+[2025-09-04T19:24:06.176+0000] {spark_submit.py:634} INFO - (spark.jars,file:///home/***/.ivy2.5.2/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-jdbc-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-client-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-http-client-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar,file:///home/***/.ivy2.5.2/jars/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-data-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar,file:///home/***/.ivy2.5.2/jars/org.slf4j_slf4j-api-1.7.36.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-common-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.locationtech.jts_jts-core-1.20.0.jar,file:///home/***/.ivy2.5.2/jars/org.wololo_jts2geojson-0.16.1.jar,file:///home/***/.ivy2.5.2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.commons_commons-math3-3.6.1.jar,file:///home/***/.ivy2.5.2/jars/org.locationtech.spatial4j_spatial4j-0.8.jar,file:///home/***/.ivy2.5.2/jars/com.google.geometry_s2-geometry-2.0.0.jar,file:///home/***/.ivy2.5.2/jars/com.uber_h3-4.1.1.jar,file:///home/***/.ivy2.5.2/jars/net.sf.geographiclib_GeographicLib-Java-1.52.jar,file:///home/***/.ivy2.5.2/jars/com.github.ben-manes.caffeine_caffeine-2.9.2.jar,file:///home/***/.ivy2.5.2/jars/com.google.guava_guava-25.1-jre.jar,file:///home/***/.ivy2.5.2/jars/com.google.code.findbugs_jsr305-3.0.2.jar,file:///home/***/.ivy2.5.2/jars/com.google.j2objc_j2objc-annotations-1.1.jar,file:///home/***/.ivy2.5.2/jars/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar,file:///home/***/.ivy2.5.2/jars/org.checkerframework_checker-qual-3.10.0.jar,file:///home/***/.ivy2.5.2/jars/com.google.errorprone_error_prone_annotations-2.5.1.jar,file:///home/***/.ivy2.5.2/jars/org.xerial_sqlite-jdbc-3.41.2.2.jar,file:///home/***/.ivy2.5.2/jars/commons-lang_commons-lang-2.6.jar,file:///home/***/.ivy2.5.2/jars/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar,file:///home/***/.ivy2.5.2/jars/org.beryx_awt-color-factory-1.0.0.jar,file:///home/***/.ivy2.5.2/jars/com.github.scopt_scopt_2.12-4.1.0.jar)
+[2025-09-04T19:24:06.177+0000] {spark_submit.py:634} INFO - (spark.master,spark://spark-master:7077)
+[2025-09-04T19:24:06.178+0000] {spark_submit.py:634} INFO - (spark.repl.local.jars,file:///home/***/.ivy2.5.2/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-jdbc-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-client-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-http-client-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar,file:///home/***/.ivy2.5.2/jars/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar,file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-data-0.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar,file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar,file:///home/***/.ivy2.5.2/jars/org.slf4j_slf4j-api-1.7.36.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-common-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar,file:///home/***/.ivy2.5.2/jars/org.locationtech.jts_jts-core-1.20.0.jar,file:///home/***/.ivy2.5.2/jars/org.wololo_jts2geojson-0.16.1.jar,file:///home/***/.ivy2.5.2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar,file:///home/***/.ivy2.5.2/jars/org.apache.commons_commons-math3-3.6.1.jar,file:///home/***/.ivy2.5.2/jars/org.locationtech.spatial4j_spatial4j-0.8.jar,file:///home/***/.ivy2.5.2/jars/com.google.geometry_s2-geometry-2.0.0.jar,file:///home/***/.ivy2.5.2/jars/com.uber_h3-4.1.1.jar,file:///home/***/.ivy2.5.2/jars/net.sf.geographiclib_GeographicLib-Java-1.52.jar,file:///home/***/.ivy2.5.2/jars/com.github.ben-manes.caffeine_caffeine-2.9.2.jar,file:///home/***/.ivy2.5.2/jars/com.google.guava_guava-25.1-jre.jar,file:///home/***/.ivy2.5.2/jars/com.google.code.findbugs_jsr305-3.0.2.jar,file:///home/***/.ivy2.5.2/jars/com.google.j2objc_j2objc-annotations-1.1.jar,file:///home/***/.ivy2.5.2/jars/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar,file:///home/***/.ivy2.5.2/jars/org.checkerframework_checker-qual-3.10.0.jar,file:///home/***/.ivy2.5.2/jars/com.google.errorprone_error_prone_annotations-2.5.1.jar,file:///home/***/.ivy2.5.2/jars/org.xerial_sqlite-jdbc-3.41.2.2.jar,file:///home/***/.ivy2.5.2/jars/commons-lang_commons-lang-2.6.jar,file:///home/***/.ivy2.5.2/jars/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar,file:///home/***/.ivy2.5.2/jars/org.beryx_awt-color-factory-1.0.0.jar,file:///home/***/.ivy2.5.2/jars/com.github.scopt_scopt_2.12-4.1.0.jar)
+[2025-09-04T19:24:06.179+0000] {spark_submit.py:634} INFO - (spark.submit.deployMode,client)
+[2025-09-04T19:24:06.179+0000] {spark_submit.py:634} INFO - (spark.submit.pyFiles,/home/***/.ivy2.5.2/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar,/home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-jdbc-0.7.0.jar,/home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-client-0.7.0.jar,/home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-http-client-0.7.0.jar,/home/***/.ivy2.5.2/jars/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar,/home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar,/home/***/.ivy2.5.2/jars/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar,/home/***/.ivy2.5.2/jars/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar,/home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-data-0.7.0.jar,/home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar,/home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar,/home/***/.ivy2.5.2/jars/org.slf4j_slf4j-api-1.7.36.jar,/home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-common-1.7.0.jar,/home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar,/home/***/.ivy2.5.2/jars/org.locationtech.jts_jts-core-1.20.0.jar,/home/***/.ivy2.5.2/jars/org.wololo_jts2geojson-0.16.1.jar,/home/***/.ivy2.5.2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar,/home/***/.ivy2.5.2/jars/org.apache.commons_commons-math3-3.6.1.jar,/home/***/.ivy2.5.2/jars/org.locationtech.spatial4j_spatial4j-0.8.jar,/home/***/.ivy2.5.2/jars/com.google.geometry_s2-geometry-2.0.0.jar,/home/***/.ivy2.5.2/jars/com.uber_h3-4.1.1.jar,/home/***/.ivy2.5.2/jars/net.sf.geographiclib_GeographicLib-Java-1.52.jar,/home/***/.ivy2.5.2/jars/com.github.ben-manes.caffeine_caffeine-2.9.2.jar,/home/***/.ivy2.5.2/jars/com.google.guava_guava-25.1-jre.jar,/home/***/.ivy2.5.2/jars/com.google.code.findbugs_jsr305-3.0.2.jar,/home/***/.ivy2.5.2/jars/com.google.j2objc_j2objc-annotations-1.1.jar,/home/***/.ivy2.5.2/jars/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar,/home/***/.ivy2.5.2/jars/org.checkerframework_checker-qual-3.10.0.jar,/home/***/.ivy2.5.2/jars/com.google.errorprone_error_prone_annotations-2.5.1.jar,/home/***/.ivy2.5.2/jars/org.xerial_sqlite-jdbc-3.41.2.2.jar,/home/***/.ivy2.5.2/jars/commons-lang_commons-lang-2.6.jar,/home/***/.ivy2.5.2/jars/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar,/home/***/.ivy2.5.2/jars/org.beryx_awt-color-factory-1.0.0.jar,/home/***/.ivy2.5.2/jars/com.github.scopt_scopt_2.12-4.1.0.jar)
+[2025-09-04T19:24:06.180+0000] {spark_submit.py:634} INFO - Classpath elements:
+[2025-09-04T19:24:06.180+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar
+[2025-09-04T19:24:06.181+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-jdbc-0.7.0.jar
+[2025-09-04T19:24:06.181+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-client-0.7.0.jar
+[2025-09-04T19:24:06.181+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-http-client-0.7.0.jar
+[2025-09-04T19:24:06.182+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar
+[2025-09-04T19:24:06.182+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar
+[2025-09-04T19:24:06.182+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar
+[2025-09-04T19:24:06.183+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar
+[2025-09-04T19:24:06.183+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-data-0.7.0.jar
+[2025-09-04T19:24:06.183+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar
+[2025-09-04T19:24:06.184+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar
+[2025-09-04T19:24:06.184+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.slf4j_slf4j-api-1.7.36.jar
+[2025-09-04T19:24:06.184+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-common-1.7.0.jar
+[2025-09-04T19:24:06.185+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar
+[2025-09-04T19:24:06.185+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.locationtech.jts_jts-core-1.20.0.jar
+[2025-09-04T19:24:06.186+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.wololo_jts2geojson-0.16.1.jar
+[2025-09-04T19:24:06.186+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar
+[2025-09-04T19:24:06.186+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.apache.commons_commons-math3-3.6.1.jar
+[2025-09-04T19:24:06.187+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.locationtech.spatial4j_spatial4j-0.8.jar
+[2025-09-04T19:24:06.187+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.google.geometry_s2-geometry-2.0.0.jar
+[2025-09-04T19:24:06.187+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.uber_h3-4.1.1.jar
+[2025-09-04T19:24:06.188+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/net.sf.geographiclib_GeographicLib-Java-1.52.jar
+[2025-09-04T19:24:06.188+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.github.ben-manes.caffeine_caffeine-2.9.2.jar
+[2025-09-04T19:24:06.189+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.google.guava_guava-25.1-jre.jar
+[2025-09-04T19:24:06.189+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.google.code.findbugs_jsr305-3.0.2.jar
+[2025-09-04T19:24:06.190+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.google.j2objc_j2objc-annotations-1.1.jar
+[2025-09-04T19:24:06.190+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar
+[2025-09-04T19:24:06.190+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.checkerframework_checker-qual-3.10.0.jar
+[2025-09-04T19:24:06.191+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.google.errorprone_error_prone_annotations-2.5.1.jar
+[2025-09-04T19:24:06.191+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.xerial_sqlite-jdbc-3.41.2.2.jar
+[2025-09-04T19:24:06.191+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/commons-lang_commons-lang-2.6.jar
+[2025-09-04T19:24:06.192+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar
+[2025-09-04T19:24:06.192+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/org.beryx_awt-color-factory-1.0.0.jar
+[2025-09-04T19:24:06.192+0000] {spark_submit.py:634} INFO - file:///home/***/.ivy2.5.2/jars/com.github.scopt_scopt_2.12-4.1.0.jar
+[2025-09-04T19:24:06.193+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:24:06.193+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:24:08.444+0000] {spark_submit.py:634} INFO - Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[2025-09-04T19:24:08.449+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SparkContext: Running Spark version 4.0.0
+[2025-09-04T19:24:08.451+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SparkContext: OS info Linux, 5.10.0-35-cloud-amd64, amd64
+[2025-09-04T19:24:08.451+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SparkContext: Java version 17.0.15
+[2025-09-04T19:24:08.477+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO ResourceUtils: ==============================================================
+[2025-09-04T19:24:08.478+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-09-04T19:24:08.478+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO ResourceUtils: ==============================================================
+[2025-09-04T19:24:08.479+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SparkContext: Submitted application: ExampleJob111
+[2025-09-04T19:24:08.509+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 40960, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-09-04T19:24:08.513+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO ResourceProfile: Limiting resource is cpu
+[2025-09-04T19:24:08.514+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-09-04T19:24:08.565+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SecurityManager: Changing view acls to: default
+[2025-09-04T19:24:08.566+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SecurityManager: Changing modify acls to: default
+[2025-09-04T19:24:08.566+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SecurityManager: Changing view acls groups to: default
+[2025-09-04T19:24:08.567+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SecurityManager: Changing modify acls groups to: default
+[2025-09-04T19:24:08.570+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: default groups with view permissions: EMPTY; users with modify permissions: default; groups with modify permissions: EMPTY; RPC SSL disabled
+[2025-09-04T19:24:08.819+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO Utils: Successfully started service 'sparkDriver' on port 41937.
+[2025-09-04T19:24:08.849+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SparkEnv: Registering MapOutputTracker
+[2025-09-04T19:24:08.863+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SparkEnv: Registering BlockManagerMaster
+[2025-09-04T19:24:08.878+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-09-04T19:24:08.878+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-09-04T19:24:08.881+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-09-04T19:24:08.902+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-71a0d1df-365e-4d81-bb28-10ccb23251ae
+[2025-09-04T19:24:08.925+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:08 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-09-04T19:24:09.050+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2025-09-04T19:24:09.122+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-09-04T19:24:09.169+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar at spark://1d7a6825dc2f:41937/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.170+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-jdbc-0.7.0.jar at spark://1d7a6825dc2f:41937/jars/com.clickhouse_clickhouse-jdbc-0.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.170+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-client-0.7.0.jar at spark://1d7a6825dc2f:41937/jars/com.clickhouse_clickhouse-client-0.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.171+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-http-client-0.7.0.jar at spark://1d7a6825dc2f:41937/jars/com.clickhouse_clickhouse-http-client-0.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.171+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar at spark://1d7a6825dc2f:41937/jars/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.171+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar at spark://1d7a6825dc2f:41937/jars/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.172+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar at spark://1d7a6825dc2f:41937/jars/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.172+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar at spark://1d7a6825dc2f:41937/jars/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.172+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-data-0.7.0.jar at spark://1d7a6825dc2f:41937/jars/com.clickhouse_clickhouse-data-0.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.173+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar at spark://1d7a6825dc2f:41937/jars/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.173+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar at spark://1d7a6825dc2f:41937/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.173+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.slf4j_slf4j-api-1.7.36.jar at spark://1d7a6825dc2f:41937/jars/org.slf4j_slf4j-api-1.7.36.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.174+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-common-1.7.0.jar at spark://1d7a6825dc2f:41937/jars/org.apache.sedona_sedona-common-1.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.174+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar at spark://1d7a6825dc2f:41937/jars/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.174+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.locationtech.jts_jts-core-1.20.0.jar at spark://1d7a6825dc2f:41937/jars/org.locationtech.jts_jts-core-1.20.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.175+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.wololo_jts2geojson-0.16.1.jar at spark://1d7a6825dc2f:41937/jars/org.wololo_jts2geojson-0.16.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.175+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar at spark://1d7a6825dc2f:41937/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.175+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.apache.commons_commons-math3-3.6.1.jar at spark://1d7a6825dc2f:41937/jars/org.apache.commons_commons-math3-3.6.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.176+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.locationtech.spatial4j_spatial4j-0.8.jar at spark://1d7a6825dc2f:41937/jars/org.locationtech.spatial4j_spatial4j-0.8.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.176+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.google.geometry_s2-geometry-2.0.0.jar at spark://1d7a6825dc2f:41937/jars/com.google.geometry_s2-geometry-2.0.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.176+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.uber_h3-4.1.1.jar at spark://1d7a6825dc2f:41937/jars/com.uber_h3-4.1.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.176+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/net.sf.geographiclib_GeographicLib-Java-1.52.jar at spark://1d7a6825dc2f:41937/jars/net.sf.geographiclib_GeographicLib-Java-1.52.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.177+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.github.ben-manes.caffeine_caffeine-2.9.2.jar at spark://1d7a6825dc2f:41937/jars/com.github.ben-manes.caffeine_caffeine-2.9.2.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.177+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.google.guava_guava-25.1-jre.jar at spark://1d7a6825dc2f:41937/jars/com.google.guava_guava-25.1-jre.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.177+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.google.code.findbugs_jsr305-3.0.2.jar at spark://1d7a6825dc2f:41937/jars/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.178+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.google.j2objc_j2objc-annotations-1.1.jar at spark://1d7a6825dc2f:41937/jars/com.google.j2objc_j2objc-annotations-1.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.178+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar at spark://1d7a6825dc2f:41937/jars/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.178+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.checkerframework_checker-qual-3.10.0.jar at spark://1d7a6825dc2f:41937/jars/org.checkerframework_checker-qual-3.10.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.179+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.google.errorprone_error_prone_annotations-2.5.1.jar at spark://1d7a6825dc2f:41937/jars/com.google.errorprone_error_prone_annotations-2.5.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.179+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.xerial_sqlite-jdbc-3.41.2.2.jar at spark://1d7a6825dc2f:41937/jars/org.xerial_sqlite-jdbc-3.41.2.2.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.179+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/commons-lang_commons-lang-2.6.jar at spark://1d7a6825dc2f:41937/jars/commons-lang_commons-lang-2.6.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.180+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar at spark://1d7a6825dc2f:41937/jars/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.180+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/org.beryx_awt-color-factory-1.0.0.jar at spark://1d7a6825dc2f:41937/jars/org.beryx_awt-color-factory-1.0.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.180+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added JAR file:///home/***/.ivy2.5.2/jars/com.github.scopt_scopt_2.12-4.1.0.jar at spark://1d7a6825dc2f:41937/jars/com.github.scopt_scopt_2.12-4.1.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.186+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar at spark://1d7a6825dc2f:41937/files/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.190+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.clickhouse.spark_clickhouse-spark-runtime-3.5_2.12-0.8.0.jar
+[2025-09-04T19:24:09.205+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-jdbc-0.7.0.jar at spark://1d7a6825dc2f:41937/files/com.clickhouse_clickhouse-jdbc-0.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.206+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-jdbc-0.7.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.clickhouse_clickhouse-jdbc-0.7.0.jar
+[2025-09-04T19:24:09.212+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-client-0.7.0.jar at spark://1d7a6825dc2f:41937/files/com.clickhouse_clickhouse-client-0.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.213+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-client-0.7.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.clickhouse_clickhouse-client-0.7.0.jar
+[2025-09-04T19:24:09.218+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-http-client-0.7.0.jar at spark://1d7a6825dc2f:41937/files/com.clickhouse_clickhouse-http-client-0.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.219+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-http-client-0.7.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.clickhouse_clickhouse-http-client-0.7.0.jar
+[2025-09-04T19:24:09.224+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar at spark://1d7a6825dc2f:41937/files/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.225+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.apache.httpcomponents.client5_httpclient5-5.3.1.jar
+[2025-09-04T19:24:09.231+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar at spark://1d7a6825dc2f:41937/files/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.232+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.apache.sedona_sedona-spark-3.5_2.12-1.7.0.jar
+[2025-09-04T19:24:09.241+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar at spark://1d7a6825dc2f:41937/files/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.241+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.datasyslab_geotools-wrapper-1.7.0-28.5.jar
+[2025-09-04T19:24:09.275+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar at spark://1d7a6825dc2f:41937/files/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.275+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/uk.co.gresearch.spark_spark-extension_2.12-2.11.0-3.4.jar
+[2025-09-04T19:24:09.281+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-data-0.7.0.jar at spark://1d7a6825dc2f:41937/files/com.clickhouse_clickhouse-data-0.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.281+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.clickhouse_clickhouse-data-0.7.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.clickhouse_clickhouse-data-0.7.0.jar
+[2025-09-04T19:24:09.286+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar at spark://1d7a6825dc2f:41937/files/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.287+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.apache.httpcomponents.core5_httpcore5-5.2.4.jar
+[2025-09-04T19:24:09.293+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar at spark://1d7a6825dc2f:41937/files/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.293+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.apache.httpcomponents.core5_httpcore5-h2-5.2.4.jar
+[2025-09-04T19:24:09.299+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.slf4j_slf4j-api-1.7.36.jar at spark://1d7a6825dc2f:41937/files/org.slf4j_slf4j-api-1.7.36.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.299+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.slf4j_slf4j-api-1.7.36.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.slf4j_slf4j-api-1.7.36.jar
+[2025-09-04T19:24:09.304+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-common-1.7.0.jar at spark://1d7a6825dc2f:41937/files/org.apache.sedona_sedona-common-1.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.305+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-common-1.7.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.apache.sedona_sedona-common-1.7.0.jar
+[2025-09-04T19:24:09.310+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar at spark://1d7a6825dc2f:41937/files/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.310+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.apache.sedona_sedona-spark-common-3.5_2.12-1.7.0.jar
+[2025-09-04T19:24:09.318+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.locationtech.jts_jts-core-1.20.0.jar at spark://1d7a6825dc2f:41937/files/org.locationtech.jts_jts-core-1.20.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.318+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.locationtech.jts_jts-core-1.20.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.locationtech.jts_jts-core-1.20.0.jar
+[2025-09-04T19:24:09.324+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.wololo_jts2geojson-0.16.1.jar at spark://1d7a6825dc2f:41937/files/org.wololo_jts2geojson-0.16.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.324+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.wololo_jts2geojson-0.16.1.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.wololo_jts2geojson-0.16.1.jar
+[2025-09-04T19:24:09.329+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar at spark://1d7a6825dc2f:41937/files/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.330+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.scala-lang.modules_scala-collection-compat_2.12-2.5.0.jar
+[2025-09-04T19:24:09.335+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.apache.commons_commons-math3-3.6.1.jar at spark://1d7a6825dc2f:41937/files/org.apache.commons_commons-math3-3.6.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.336+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.apache.commons_commons-math3-3.6.1.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.apache.commons_commons-math3-3.6.1.jar
+[2025-09-04T19:24:09.343+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.locationtech.spatial4j_spatial4j-0.8.jar at spark://1d7a6825dc2f:41937/files/org.locationtech.spatial4j_spatial4j-0.8.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.343+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.locationtech.spatial4j_spatial4j-0.8.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.locationtech.spatial4j_spatial4j-0.8.jar
+[2025-09-04T19:24:09.348+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.google.geometry_s2-geometry-2.0.0.jar at spark://1d7a6825dc2f:41937/files/com.google.geometry_s2-geometry-2.0.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.349+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.google.geometry_s2-geometry-2.0.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.google.geometry_s2-geometry-2.0.0.jar
+[2025-09-04T19:24:09.354+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.uber_h3-4.1.1.jar at spark://1d7a6825dc2f:41937/files/com.uber_h3-4.1.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.354+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.uber_h3-4.1.1.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.uber_h3-4.1.1.jar
+[2025-09-04T19:24:09.360+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/net.sf.geographiclib_GeographicLib-Java-1.52.jar at spark://1d7a6825dc2f:41937/files/net.sf.geographiclib_GeographicLib-Java-1.52.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.360+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/net.sf.geographiclib_GeographicLib-Java-1.52.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/net.sf.geographiclib_GeographicLib-Java-1.52.jar
+[2025-09-04T19:24:09.365+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.github.ben-manes.caffeine_caffeine-2.9.2.jar at spark://1d7a6825dc2f:41937/files/com.github.ben-manes.caffeine_caffeine-2.9.2.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.365+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.github.ben-manes.caffeine_caffeine-2.9.2.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.github.ben-manes.caffeine_caffeine-2.9.2.jar
+[2025-09-04T19:24:09.371+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.google.guava_guava-25.1-jre.jar at spark://1d7a6825dc2f:41937/files/com.google.guava_guava-25.1-jre.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.371+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.google.guava_guava-25.1-jre.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.google.guava_guava-25.1-jre.jar
+[2025-09-04T19:24:09.379+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.google.code.findbugs_jsr305-3.0.2.jar at spark://1d7a6825dc2f:41937/files/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.379+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.google.code.findbugs_jsr305-3.0.2.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.google.code.findbugs_jsr305-3.0.2.jar
+[2025-09-04T19:24:09.384+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.google.j2objc_j2objc-annotations-1.1.jar at spark://1d7a6825dc2f:41937/files/com.google.j2objc_j2objc-annotations-1.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.384+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.google.j2objc_j2objc-annotations-1.1.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.google.j2objc_j2objc-annotations-1.1.jar
+[2025-09-04T19:24:09.389+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar at spark://1d7a6825dc2f:41937/files/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.390+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.codehaus.mojo_animal-sniffer-annotations-1.14.jar
+[2025-09-04T19:24:09.394+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.checkerframework_checker-qual-3.10.0.jar at spark://1d7a6825dc2f:41937/files/org.checkerframework_checker-qual-3.10.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.394+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.checkerframework_checker-qual-3.10.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.checkerframework_checker-qual-3.10.0.jar
+[2025-09-04T19:24:09.399+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.google.errorprone_error_prone_annotations-2.5.1.jar at spark://1d7a6825dc2f:41937/files/com.google.errorprone_error_prone_annotations-2.5.1.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.399+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.google.errorprone_error_prone_annotations-2.5.1.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.google.errorprone_error_prone_annotations-2.5.1.jar
+[2025-09-04T19:24:09.404+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.xerial_sqlite-jdbc-3.41.2.2.jar at spark://1d7a6825dc2f:41937/files/org.xerial_sqlite-jdbc-3.41.2.2.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.404+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.xerial_sqlite-jdbc-3.41.2.2.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.xerial_sqlite-jdbc-3.41.2.2.jar
+[2025-09-04T19:24:09.419+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/commons-lang_commons-lang-2.6.jar at spark://1d7a6825dc2f:41937/files/commons-lang_commons-lang-2.6.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.420+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/commons-lang_commons-lang-2.6.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/commons-lang_commons-lang-2.6.jar
+[2025-09-04T19:24:09.425+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar at spark://1d7a6825dc2f:41937/files/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.425+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/graphframes_graphframes-0.8.3-spark3.5-s_2.12.jar
+[2025-09-04T19:24:09.430+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/org.beryx_awt-color-factory-1.0.0.jar at spark://1d7a6825dc2f:41937/files/org.beryx_awt-color-factory-1.0.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.430+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/org.beryx_awt-color-factory-1.0.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/org.beryx_awt-color-factory-1.0.0.jar
+[2025-09-04T19:24:09.435+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SparkContext: Added file file:///home/***/.ivy2.5.2/jars/com.github.scopt_scopt_2.12-4.1.0.jar at spark://1d7a6825dc2f:41937/files/com.github.scopt_scopt_2.12-4.1.0.jar with timestamp 1757013848434
+[2025-09-04T19:24:09.435+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO Utils: Copying /home/***/.ivy2.5.2/jars/com.github.scopt_scopt_2.12-4.1.0.jar to /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/userFiles-f652db85-db85-4572-b28d-9af82e5043e1/com.github.scopt_scopt_2.12-4.1.0.jar
+[2025-09-04T19:24:09.460+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SecurityManager: Changing view acls to: default
+[2025-09-04T19:24:09.460+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SecurityManager: Changing modify acls to: default
+[2025-09-04T19:24:09.461+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SecurityManager: Changing view acls groups to: default
+[2025-09-04T19:24:09.461+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SecurityManager: Changing modify acls groups to: default
+[2025-09-04T19:24:09.461+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: default groups with view permissions: EMPTY; users with modify permissions: default; groups with modify permissions: EMPTY; RPC SSL disabled
+[2025-09-04T19:24:09.624+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+[2025-09-04T19:24:09.671+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 INFO TransportClientFactory: Successfully created connection to spark-master/172.18.0.2:7077 after 25 ms (0 ms spent in bootstraps)
+[2025-09-04T19:24:09.705+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:09 WARN StandaloneAppClient$ClientEndpoint: Failed to connect to master spark-master:7077
+[2025-09-04T19:24:09.705+0000] {spark_submit.py:634} INFO - org.apache.spark.SparkException: Exception thrown in awaitResult:
+[2025-09-04T19:24:09.706+0000] {spark_submit.py:634} INFO - at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:53)
+[2025-09-04T19:24:09.706+0000] {spark_submit.py:634} INFO - at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:342)
+[2025-09-04T19:24:09.707+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+[2025-09-04T19:24:09.707+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:102)
+[2025-09-04T19:24:09.707+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:110)
+[2025-09-04T19:24:09.708+0000] {spark_submit.py:634} INFO - at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint$$anon$1.run(StandaloneAppClient.scala:110)
+[2025-09-04T19:24:09.708+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-09-04T19:24:09.708+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-09-04T19:24:09.709+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-09-04T19:24:09.709+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-09-04T19:24:09.709+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-09-04T19:24:09.710+0000] {spark_submit.py:634} INFO - Caused by: java.lang.RuntimeException: java.io.InvalidClassException: org.apache.spark.rpc.netty.RpcEndpointVerifier$CheckExistence; local class incompatible: stream classdesc serialVersionUID = 5378738997755484868, local class serialVersionUID = 7789290765573734431
+[2025-09-04T19:24:09.710+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:597)
+[2025-09-04T19:24:09.710+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:2051)
+[2025-09-04T19:24:09.711+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1898)
+[2025-09-04T19:24:09.711+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2224)
+[2025-09-04T19:24:09.712+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1733)
+[2025-09-04T19:24:09.712+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+[2025-09-04T19:24:09.712+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+[2025-09-04T19:24:09.712+0000] {spark_submit.py:634} INFO - at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:87)
+[2025-09-04T19:24:09.713+0000] {spark_submit.py:634} INFO - at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:123)
+[2025-09-04T19:24:09.713+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$deserialize$2(NettyRpcEnv.scala:299)
+[2025-09-04T19:24:09.713+0000] {spark_submit.py:634} INFO - at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+[2025-09-04T19:24:09.714+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.deserialize(NettyRpcEnv.scala:352)
+[2025-09-04T19:24:09.714+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$deserialize$1(NettyRpcEnv.scala:298)
+[2025-09-04T19:24:09.714+0000] {spark_submit.py:634} INFO - at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+[2025-09-04T19:24:09.715+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.deserialize(NettyRpcEnv.scala:298)
+[2025-09-04T19:24:09.715+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.RequestMessage$.apply(NettyRpcEnv.scala:646)
+[2025-09-04T19:24:09.715+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcHandler.internalReceive(NettyRpcEnv.scala:697)
+[2025-09-04T19:24:09.716+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcHandler.receive(NettyRpcEnv.scala:682)
+[2025-09-04T19:24:09.716+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportRequestHandler.processRpcRequest(TransportRequestHandler.java:163)
+[2025-09-04T19:24:09.716+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportRequestHandler.handle(TransportRequestHandler.java:109)
+[2025-09-04T19:24:09.717+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:140)
+[2025-09-04T19:24:09.717+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:53)
+[2025-09-04T19:24:09.717+0000] {spark_submit.py:634} INFO - at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2025-09-04T19:24:09.718+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:09.718+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:09.718+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:09.719+0000] {spark_submit.py:634} INFO - at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+[2025-09-04T19:24:09.719+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2025-09-04T19:24:09.719+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:09.720+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:09.720+0000] {spark_submit.py:634} INFO - at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+[2025-09-04T19:24:09.720+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:09.721+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:09.721+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:09.721+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2025-09-04T19:24:09.722+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:09.722+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:09.722+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:09.723+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+[2025-09-04T19:24:09.723+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2025-09-04T19:24:09.723+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:09.723+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+[2025-09-04T19:24:09.724+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2025-09-04T19:24:09.724+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+[2025-09-04T19:24:09.724+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2025-09-04T19:24:09.725+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2025-09-04T19:24:09.725+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2025-09-04T19:24:09.725+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2025-09-04T19:24:09.726+0000] {spark_submit.py:634} INFO - at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2025-09-04T19:24:09.726+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2025-09-04T19:24:09.726+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-09-04T19:24:09.727+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:24:09.727+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.client.TransportResponseHandler.handle(TransportResponseHandler.java:217)
+[2025-09-04T19:24:09.727+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:145)
+[2025-09-04T19:24:09.728+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:55)
+[2025-09-04T19:24:09.728+0000] {spark_submit.py:634} INFO - at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2025-09-04T19:24:09.728+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:09.729+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:09.729+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:09.729+0000] {spark_submit.py:634} INFO - at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289)
+[2025-09-04T19:24:09.729+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2025-09-04T19:24:09.730+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:09.730+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:09.730+0000] {spark_submit.py:634} INFO - at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:107)
+[2025-09-04T19:24:09.731+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:09.731+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:09.731+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:09.732+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2025-09-04T19:24:09.732+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:09.732+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:09.733+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:09.733+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+[2025-09-04T19:24:09.733+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2025-09-04T19:24:09.734+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:09.734+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+[2025-09-04T19:24:09.734+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2025-09-04T19:24:09.735+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+[2025-09-04T19:24:09.735+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+[2025-09-04T19:24:09.735+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+[2025-09-04T19:24:09.736+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2025-09-04T19:24:09.736+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+[2025-09-04T19:24:09.736+0000] {spark_submit.py:634} INFO - at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2025-09-04T19:24:09.737+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2025-09-04T19:24:09.737+0000] {spark_submit.py:634} INFO - ... 1 more
+[2025-09-04T19:24:29.625+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:29 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+[2025-09-04T19:24:29.630+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:29 WARN StandaloneAppClient$ClientEndpoint: Failed to connect to master spark-master:7077
+[2025-09-04T19:24:29.631+0000] {spark_submit.py:634} INFO - org.apache.spark.SparkException: Exception thrown in awaitResult:
+[2025-09-04T19:24:29.631+0000] {spark_submit.py:634} INFO - at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:53)
+[2025-09-04T19:24:29.632+0000] {spark_submit.py:634} INFO - at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:342)
+[2025-09-04T19:24:29.632+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+[2025-09-04T19:24:29.632+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:102)
+[2025-09-04T19:24:29.632+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:110)
+[2025-09-04T19:24:29.633+0000] {spark_submit.py:634} INFO - at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint$$anon$1.run(StandaloneAppClient.scala:110)
+[2025-09-04T19:24:29.633+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-09-04T19:24:29.633+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-09-04T19:24:29.634+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-09-04T19:24:29.634+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-09-04T19:24:29.634+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-09-04T19:24:29.634+0000] {spark_submit.py:634} INFO - Caused by: java.lang.RuntimeException: java.io.InvalidClassException: org.apache.spark.rpc.netty.RpcEndpointVerifier$CheckExistence; local class incompatible: stream classdesc serialVersionUID = 5378738997755484868, local class serialVersionUID = 7789290765573734431
+[2025-09-04T19:24:29.635+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:597)
+[2025-09-04T19:24:29.635+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:2051)
+[2025-09-04T19:24:29.635+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1898)
+[2025-09-04T19:24:29.636+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2224)
+[2025-09-04T19:24:29.636+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1733)
+[2025-09-04T19:24:29.636+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+[2025-09-04T19:24:29.637+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+[2025-09-04T19:24:29.637+0000] {spark_submit.py:634} INFO - at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:87)
+[2025-09-04T19:24:29.637+0000] {spark_submit.py:634} INFO - at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:123)
+[2025-09-04T19:24:29.637+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$deserialize$2(NettyRpcEnv.scala:299)
+[2025-09-04T19:24:29.638+0000] {spark_submit.py:634} INFO - at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+[2025-09-04T19:24:29.638+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.deserialize(NettyRpcEnv.scala:352)
+[2025-09-04T19:24:29.638+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$deserialize$1(NettyRpcEnv.scala:298)
+[2025-09-04T19:24:29.639+0000] {spark_submit.py:634} INFO - at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+[2025-09-04T19:24:29.639+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.deserialize(NettyRpcEnv.scala:298)
+[2025-09-04T19:24:29.639+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.RequestMessage$.apply(NettyRpcEnv.scala:646)
+[2025-09-04T19:24:29.639+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcHandler.internalReceive(NettyRpcEnv.scala:697)
+[2025-09-04T19:24:29.640+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcHandler.receive(NettyRpcEnv.scala:682)
+[2025-09-04T19:24:29.640+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportRequestHandler.processRpcRequest(TransportRequestHandler.java:163)
+[2025-09-04T19:24:29.640+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportRequestHandler.handle(TransportRequestHandler.java:109)
+[2025-09-04T19:24:29.641+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:140)
+[2025-09-04T19:24:29.641+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:53)
+[2025-09-04T19:24:29.641+0000] {spark_submit.py:634} INFO - at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2025-09-04T19:24:29.641+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:29.642+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:29.642+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:29.642+0000] {spark_submit.py:634} INFO - at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+[2025-09-04T19:24:29.642+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2025-09-04T19:24:29.643+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:29.643+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:29.643+0000] {spark_submit.py:634} INFO - at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+[2025-09-04T19:24:29.643+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:29.644+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:29.644+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:29.644+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2025-09-04T19:24:29.644+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:29.645+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:29.645+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:29.645+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+[2025-09-04T19:24:29.646+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2025-09-04T19:24:29.646+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:29.646+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+[2025-09-04T19:24:29.646+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2025-09-04T19:24:29.647+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+[2025-09-04T19:24:29.647+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2025-09-04T19:24:29.647+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2025-09-04T19:24:29.647+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2025-09-04T19:24:29.648+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2025-09-04T19:24:29.648+0000] {spark_submit.py:634} INFO - at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2025-09-04T19:24:29.648+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2025-09-04T19:24:29.648+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-09-04T19:24:29.649+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:24:29.649+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.client.TransportResponseHandler.handle(TransportResponseHandler.java:217)
+[2025-09-04T19:24:29.649+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:145)
+[2025-09-04T19:24:29.650+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:55)
+[2025-09-04T19:24:29.650+0000] {spark_submit.py:634} INFO - at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2025-09-04T19:24:29.650+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:29.650+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:29.651+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:29.651+0000] {spark_submit.py:634} INFO - at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289)
+[2025-09-04T19:24:29.651+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2025-09-04T19:24:29.651+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:29.652+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:29.652+0000] {spark_submit.py:634} INFO - at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:107)
+[2025-09-04T19:24:29.652+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:29.652+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:29.652+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:29.653+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2025-09-04T19:24:29.653+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:29.653+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:29.653+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:29.653+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+[2025-09-04T19:24:29.654+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2025-09-04T19:24:29.654+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:29.654+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+[2025-09-04T19:24:29.654+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2025-09-04T19:24:29.654+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+[2025-09-04T19:24:29.655+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+[2025-09-04T19:24:29.655+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+[2025-09-04T19:24:29.655+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2025-09-04T19:24:29.655+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+[2025-09-04T19:24:29.655+0000] {spark_submit.py:634} INFO - at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2025-09-04T19:24:29.656+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2025-09-04T19:24:29.656+0000] {spark_submit.py:634} INFO - ... 1 more
+[2025-09-04T19:24:49.625+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:49 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+[2025-09-04T19:24:49.630+0000] {spark_submit.py:634} INFO - 25/09/04 19:24:49 WARN StandaloneAppClient$ClientEndpoint: Failed to connect to master spark-master:7077
+[2025-09-04T19:24:49.630+0000] {spark_submit.py:634} INFO - org.apache.spark.SparkException: Exception thrown in awaitResult:
+[2025-09-04T19:24:49.631+0000] {spark_submit.py:634} INFO - at org.apache.spark.util.SparkThreadUtils$.awaitResult(SparkThreadUtils.scala:53)
+[2025-09-04T19:24:49.631+0000] {spark_submit.py:634} INFO - at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:342)
+[2025-09-04T19:24:49.631+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+[2025-09-04T19:24:49.632+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:102)
+[2025-09-04T19:24:49.632+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:110)
+[2025-09-04T19:24:49.632+0000] {spark_submit.py:634} INFO - at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint$$anon$1.run(StandaloneAppClient.scala:110)
+[2025-09-04T19:24:49.633+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[2025-09-04T19:24:49.633+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2025-09-04T19:24:49.633+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2025-09-04T19:24:49.634+0000] {spark_submit.py:634} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2025-09-04T19:24:49.634+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-09-04T19:24:49.634+0000] {spark_submit.py:634} INFO - Caused by: java.lang.RuntimeException: java.io.InvalidClassException: org.apache.spark.rpc.netty.RpcEndpointVerifier$CheckExistence; local class incompatible: stream classdesc serialVersionUID = 5378738997755484868, local class serialVersionUID = 7789290765573734431
+[2025-09-04T19:24:49.635+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:597)
+[2025-09-04T19:24:49.635+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:2051)
+[2025-09-04T19:24:49.635+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1898)
+[2025-09-04T19:24:49.636+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2224)
+[2025-09-04T19:24:49.636+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1733)
+[2025-09-04T19:24:49.636+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:509)
+[2025-09-04T19:24:49.636+0000] {spark_submit.py:634} INFO - at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:467)
+[2025-09-04T19:24:49.637+0000] {spark_submit.py:634} INFO - at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:87)
+[2025-09-04T19:24:49.637+0000] {spark_submit.py:634} INFO - at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:123)
+[2025-09-04T19:24:49.637+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$deserialize$2(NettyRpcEnv.scala:299)
+[2025-09-04T19:24:49.637+0000] {spark_submit.py:634} INFO - at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+[2025-09-04T19:24:49.638+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.deserialize(NettyRpcEnv.scala:352)
+[2025-09-04T19:24:49.638+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$deserialize$1(NettyRpcEnv.scala:298)
+[2025-09-04T19:24:49.638+0000] {spark_submit.py:634} INFO - at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+[2025-09-04T19:24:49.638+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.deserialize(NettyRpcEnv.scala:298)
+[2025-09-04T19:24:49.639+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.RequestMessage$.apply(NettyRpcEnv.scala:646)
+[2025-09-04T19:24:49.639+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcHandler.internalReceive(NettyRpcEnv.scala:697)
+[2025-09-04T19:24:49.639+0000] {spark_submit.py:634} INFO - at org.apache.spark.rpc.netty.NettyRpcHandler.receive(NettyRpcEnv.scala:682)
+[2025-09-04T19:24:49.639+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportRequestHandler.processRpcRequest(TransportRequestHandler.java:163)
+[2025-09-04T19:24:49.640+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportRequestHandler.handle(TransportRequestHandler.java:109)
+[2025-09-04T19:24:49.640+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:140)
+[2025-09-04T19:24:49.640+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:53)
+[2025-09-04T19:24:49.641+0000] {spark_submit.py:634} INFO - at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2025-09-04T19:24:49.641+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:49.641+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:49.641+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:49.642+0000] {spark_submit.py:634} INFO - at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+[2025-09-04T19:24:49.642+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2025-09-04T19:24:49.642+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:49.642+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:49.643+0000] {spark_submit.py:634} INFO - at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+[2025-09-04T19:24:49.643+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:49.643+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:49.644+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:49.644+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2025-09-04T19:24:49.644+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:49.644+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:49.644+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:49.645+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+[2025-09-04T19:24:49.645+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2025-09-04T19:24:49.646+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:49.646+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+[2025-09-04T19:24:49.646+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2025-09-04T19:24:49.646+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+[2025-09-04T19:24:49.646+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2025-09-04T19:24:49.647+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2025-09-04T19:24:49.647+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2025-09-04T19:24:49.647+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2025-09-04T19:24:49.647+0000] {spark_submit.py:634} INFO - at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2025-09-04T19:24:49.647+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2025-09-04T19:24:49.648+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-09-04T19:24:49.648+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:24:49.648+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.client.TransportResponseHandler.handle(TransportResponseHandler.java:217)
+[2025-09-04T19:24:49.648+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:145)
+[2025-09-04T19:24:49.648+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.server.TransportChannelHandler.channelRead0(TransportChannelHandler.java:55)
+[2025-09-04T19:24:49.649+0000] {spark_submit.py:634} INFO - at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+[2025-09-04T19:24:49.649+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:49.649+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:49.649+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:49.650+0000] {spark_submit.py:634} INFO - at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289)
+[2025-09-04T19:24:49.650+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+[2025-09-04T19:24:49.650+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:49.650+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:49.650+0000] {spark_submit.py:634} INFO - at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:107)
+[2025-09-04T19:24:49.651+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:49.651+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:49.651+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:49.651+0000] {spark_submit.py:634} INFO - at org.apache.spark.network.util.TransportFrameDecoder.channelRead(TransportFrameDecoder.java:102)
+[2025-09-04T19:24:49.651+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+[2025-09-04T19:24:49.652+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:49.652+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+[2025-09-04T19:24:49.652+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+[2025-09-04T19:24:49.652+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+[2025-09-04T19:24:49.652+0000] {spark_submit.py:634} INFO - at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+[2025-09-04T19:24:49.653+0000] {spark_submit.py:634} INFO - at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+[2025-09-04T19:24:49.653+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+[2025-09-04T19:24:49.653+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+[2025-09-04T19:24:49.653+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+[2025-09-04T19:24:49.653+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+[2025-09-04T19:24:49.653+0000] {spark_submit.py:634} INFO - at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2025-09-04T19:24:49.654+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+[2025-09-04T19:24:49.654+0000] {spark_submit.py:634} INFO - at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2025-09-04T19:24:49.654+0000] {spark_submit.py:634} INFO - at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2025-09-04T19:24:49.654+0000] {spark_submit.py:634} INFO - ... 1 more
+[2025-09-04T19:25:09.626+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:09 WARN StandaloneSchedulerBackend: Application ID is not initialized yet.
+[2025-09-04T19:25:09.627+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:09 ERROR StandaloneSchedulerBackend: Application has been killed. Reason: All masters are unresponsive! Giving up.
+[2025-09-04T19:25:09.634+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:09 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41075.
+[2025-09-04T19:25:09.634+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:09 INFO NettyBlockTransferService: Server created on 1d7a6825dc2f:41075
+[2025-09-04T19:25:09.636+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:09 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-09-04T19:25:09.652+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 1d7a6825dc2f, 41075, None)
+[2025-09-04T19:25:09.659+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:09 INFO BlockManagerMasterEndpoint: Registering block manager 1d7a6825dc2f:41075 with 23.8 GiB RAM, BlockManagerId(driver, 1d7a6825dc2f, 41075, None)
+[2025-09-04T19:25:09.662+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 1d7a6825dc2f, 41075, None)
+[2025-09-04T19:25:09.664+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:09 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 1d7a6825dc2f, 41075, None)
+[2025-09-04T19:25:09.810+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:09 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2025-09-04T19:25:10.076+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO SparkContext: SparkContext is stopping with exitCode 0 from run at <unknown>:0.
+[2025-09-04T19:25:10.088+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO SparkUI: Stopped Spark web UI at http://1d7a6825dc2f:4040
+[2025-09-04T19:25:10.105+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO StandaloneSchedulerBackend: Shutting down all executors
+[2025-09-04T19:25:10.111+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down
+[2025-09-04T19:25:10.121+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 WARN StandaloneAppClient$ClientEndpoint: Drop UnregisterApplication(null) because has not yet connected to master
+[2025-09-04T19:25:10.135+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2025-09-04T19:25:10.152+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO MemoryStore: MemoryStore started with capacity 23.8 GiB
+[2025-09-04T19:25:10.153+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO MemoryStore: MemoryStore cleared
+[2025-09-04T19:25:10.153+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO BlockManager: BlockManager stopped
+[2025-09-04T19:25:10.160+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2025-09-04T19:25:10.162+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2025-09-04T19:25:10.194+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:10 INFO SparkContext: Successfully stopped SparkContext
+[2025-09-04T19:25:11.785+0000] {spark_submit.py:634} INFO - Traceback (most recent call last):
+[2025-09-04T19:25:11.786+0000] {spark_submit.py:634} INFO - File "/opt/***/dags/spark_app/spark_1.py", line 25, in <module>
+[2025-09-04T19:25:11.786+0000] {spark_submit.py:634} INFO - run()
+[2025-09-04T19:25:11.787+0000] {spark_submit.py:634} INFO - File "/opt/***/dags/spark_app/spark_1.py", line 4, in run
+[2025-09-04T19:25:11.787+0000] {spark_submit.py:634} INFO - spark = SparkSession.builder.appName("ExampleJob111").getOrCreate()
+[2025-09-04T19:25:11.787+0000] {spark_submit.py:634} INFO - ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-09-04T19:25:11.788+0000] {spark_submit.py:634} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/session.py", line 559, in getOrCreate
+[2025-09-04T19:25:11.788+0000] {spark_submit.py:634} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/session.py", line 641, in __init__
+[2025-09-04T19:25:11.788+0000] {spark_submit.py:634} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.9-src.zip/py4j/java_gateway.py", line 1627, in __call__
+[2025-09-04T19:25:11.789+0000] {spark_submit.py:634} INFO - File "/home/***/.local/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.9-src.zip/py4j/protocol.py", line 327, in get_return_value
+[2025-09-04T19:25:11.789+0000] {spark_submit.py:634} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling None.org.apache.spark.sql.classic.SparkSession.
+[2025-09-04T19:25:11.790+0000] {spark_submit.py:634} INFO - : java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.
+[2025-09-04T19:25:11.790+0000] {spark_submit.py:634} INFO - This stopped SparkContext was created at:
+[2025-09-04T19:25:11.790+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:25:11.790+0000] {spark_submit.py:634} INFO - org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+[2025-09-04T19:25:11.791+0000] {spark_submit.py:634} INFO - java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2025-09-04T19:25:11.791+0000] {spark_submit.py:634} INFO - java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2025-09-04T19:25:11.791+0000] {spark_submit.py:634} INFO - java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2025-09-04T19:25:11.792+0000] {spark_submit.py:634} INFO - java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2025-09-04T19:25:11.792+0000] {spark_submit.py:634} INFO - java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2025-09-04T19:25:11.792+0000] {spark_submit.py:634} INFO - py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2025-09-04T19:25:11.792+0000] {spark_submit.py:634} INFO - py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2025-09-04T19:25:11.793+0000] {spark_submit.py:634} INFO - py4j.Gateway.invoke(Gateway.java:238)
+[2025-09-04T19:25:11.793+0000] {spark_submit.py:634} INFO - py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2025-09-04T19:25:11.793+0000] {spark_submit.py:634} INFO - py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2025-09-04T19:25:11.794+0000] {spark_submit.py:634} INFO - py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)
+[2025-09-04T19:25:11.794+0000] {spark_submit.py:634} INFO - py4j.ClientServerConnection.run(ClientServerConnection.java:108)
+[2025-09-04T19:25:11.794+0000] {spark_submit.py:634} INFO - java.base/java.lang.Thread.run(Thread.java:840)
+[2025-09-04T19:25:11.794+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:25:11.795+0000] {spark_submit.py:634} INFO - And it was stopped at:
+[2025-09-04T19:25:11.795+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:25:11.795+0000] {spark_submit.py:634} INFO - org.apache.spark.SparkContext$$anon$3.run(SparkContext.scala:2284)
+[2025-09-04T19:25:11.796+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:25:11.796+0000] {spark_submit.py:634} INFO - The currently active SparkContext was created at:
+[2025-09-04T19:25:11.796+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:25:11.797+0000] {spark_submit.py:634} INFO - (No active SparkContext.)
+[2025-09-04T19:25:11.797+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:25:11.797+0000] {spark_submit.py:634} INFO - at org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:128)
+[2025-09-04T19:25:11.797+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.classic.SparkSession.<init>(SparkSession.scala:124)
+[2025-09-04T19:25:11.798+0000] {spark_submit.py:634} INFO - at org.apache.spark.sql.classic.SparkSession.<init>(SparkSession.scala:117)
+[2025-09-04T19:25:11.798+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2025-09-04T19:25:11.798+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+[2025-09-04T19:25:11.799+0000] {spark_submit.py:634} INFO - at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2025-09-04T19:25:11.799+0000] {spark_submit.py:634} INFO - at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+[2025-09-04T19:25:11.799+0000] {spark_submit.py:634} INFO - at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+[2025-09-04T19:25:11.799+0000] {spark_submit.py:634} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2025-09-04T19:25:11.800+0000] {spark_submit.py:634} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2025-09-04T19:25:11.800+0000] {spark_submit.py:634} INFO - at py4j.Gateway.invoke(Gateway.java:238)
+[2025-09-04T19:25:11.800+0000] {spark_submit.py:634} INFO - at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2025-09-04T19:25:11.801+0000] {spark_submit.py:634} INFO - at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2025-09-04T19:25:11.801+0000] {spark_submit.py:634} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)
+[2025-09-04T19:25:11.801+0000] {spark_submit.py:634} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:108)
+[2025-09-04T19:25:11.802+0000] {spark_submit.py:634} INFO - at java.base/java.lang.Thread.run(Thread.java:840)
+[2025-09-04T19:25:11.802+0000] {spark_submit.py:634} INFO - 
+[2025-09-04T19:25:11.967+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:11 INFO ShutdownHookManager: Shutdown hook called
+[2025-09-04T19:25:11.967+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:11 INFO ShutdownHookManager: Deleting directory /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def/pyspark-55dd5202-5d90-43ed-b6c0-66d265853e64
+[2025-09-04T19:25:11.973+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:11 INFO ShutdownHookManager: Deleting directory /tmp/spark-e25eca53-f597-48b9-8369-030746d9e8b0
+[2025-09-04T19:25:11.977+0000] {spark_submit.py:634} INFO - 25/09/04 19:25:11 INFO ShutdownHookManager: Deleting directory /tmp/spark-930591f0-ba37-4dc2-af22-e81576b84def
+[2025-09-04T19:25:12.023+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 176, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 560, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://spark-master:7077 --packages com.clickhouse.spark:clickhouse-spark-runtime-3.5_2.12:0.8.0,com.clickhouse:clickhouse-jdbc:0.7.0,com.clickhouse:clickhouse-client:0.7.0,com.clickhouse:clickhouse-http-client:0.7.0,org.apache.httpcomponents.client5:httpclient5:5.3.1,org.apache.sedona:sedona-spark-3.5_2.12:1.7.0,org.datasyslab:geotools-wrapper:1.7.0-28.5,uk.co.gresearch.spark:spark-extension_2.12:2.11.0-3.4 --executor-memory 40g --driver-memory 40g --name arrow-spark --verbose --deploy-mode client dags/spark_app/spark_1.py. Error code is: 1.
+[2025-09-04T19:25:12.028+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=spark_clickhouse_test, task_id=spark_submit_job, run_id=manual__2025-09-04T19:24:01.262292+00:00, execution_date=20250904T192401, start_date=20250904T192402, end_date=20250904T192512
+[2025-09-04T19:25:12.041+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-09-04T19:25:12.042+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 138 for task spark_submit_job (Cannot execute: spark-submit --master spark://spark-master:7077 --packages com.clickhouse.spark:clickhouse-spark-runtime-3.5_2.12:0.8.0,com.clickhouse:clickhouse-jdbc:0.7.0,com.clickhouse:clickhouse-client:0.7.0,com.clickhouse:clickhouse-http-client:0.7.0,org.apache.httpcomponents.client5:httpclient5:5.3.1,org.apache.sedona:sedona-spark-3.5_2.12:1.7.0,org.datasyslab:geotools-wrapper:1.7.0-28.5,uk.co.gresearch.spark:spark-extension_2.12:2.11.0-3.4 --executor-memory 40g --driver-memory 40g --name arrow-spark --verbose --deploy-mode client dags/spark_app/spark_1.py. Error code is: 1.; 360)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 176, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 560, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://spark-master:7077 --packages com.clickhouse.spark:clickhouse-spark-runtime-3.5_2.12:0.8.0,com.clickhouse:clickhouse-jdbc:0.7.0,com.clickhouse:clickhouse-client:0.7.0,com.clickhouse:clickhouse-http-client:0.7.0,org.apache.httpcomponents.client5:httpclient5:5.3.1,org.apache.sedona:sedona-spark-3.5_2.12:1.7.0,org.datasyslab:geotools-wrapper:1.7.0-28.5,uk.co.gresearch.spark:spark-extension_2.12:2.11.0-3.4 --executor-memory 40g --driver-memory 40g --name arrow-spark --verbose --deploy-mode client dags/spark_app/spark_1.py. Error code is: 1.
+[2025-09-04T19:25:12.063+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-09-04T19:25:12.085+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-04T19:25:12.088+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

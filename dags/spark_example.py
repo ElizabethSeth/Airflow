@@ -44,7 +44,7 @@ def spark_example():
         task_id='spark_submit_job',
         application='dags/spark_app/spark_1.py',
         #conn_id='spark_master',
-        conn_id='my_spark_conn',
+        conn_id='spark',
         total_executor_cores='1',
         executor_cores='1',
         executor_memory=f'{ram}g',
@@ -78,7 +78,7 @@ def spark_example():
     def filter_inside_hexagons(spark: SparkSession, sc: SparkContext):
 
         config = (
-            SedonaContext.builder()
+            SparkSession.builder
             .config('spark.jars.repositories', 'https://artifacts.unidata.ucar.edu/repository/unidata-all')
             .config("spark.sql.catalog.clickhouse", "com.clickhouse.spark.ClickHouseCatalog")
             .config("spark.sql.catalog.clickhouse.host", CH_IP)

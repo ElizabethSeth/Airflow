@@ -12,6 +12,8 @@ from pyspark.sql import SparkSession
 from sedona.spark import SedonaContext
 from pyspark import SparkContext
 from lib.clickhouse_operator_extended import ClickHouseOperatorExtended
+from sedona.register import SedonaRegistrator
+
 
 import os
 
@@ -22,16 +24,27 @@ CLICKHOUSE_CONN_ID = 'clickhouse'
 PYSPARK_CONN_ID = "spark"
 
 
+# packages = [
+#             "com.clickhouse.spark:clickhouse-spark-runtime-3.5_2.12:0.8.0"
+#             ,"com.clickhouse:clickhouse-jdbc:0.7.0"
+#             ,"com.clickhouse:clickhouse-client:0.7.0"
+#             ,"com.clickhouse:clickhouse-http-client:0.7.0"
+#             ,"org.apache.httpcomponents.client5:httpclient5:5.3.1"
+#             ,'org.apache.sedona:sedona-spark-3.5_2.12:1.7.0'
+#             ,'org.datasyslab:geotools-wrapper:1.7.0-28.5'
+#             ,'uk.co.gresearch.spark:spark-extension_2.12:2.11.0-3.4'
+#         ]
+
 packages = [
-            "com.clickhouse.spark:clickhouse-spark-runtime-3.5_2.12:0.8.0"
-            ,"com.clickhouse:clickhouse-jdbc:0.7.0"
-            ,"com.clickhouse:clickhouse-client:0.7.0"
-            ,"com.clickhouse:clickhouse-http-client:0.7.0"
-            ,"org.apache.httpcomponents.client5:httpclient5:5.3.1"
-            ,'org.apache.sedona:sedona-spark-3.5_2.12:1.7.0'
-            ,'org.datasyslab:geotools-wrapper:1.7.0-28.5'
-            ,'uk.co.gresearch.spark:spark-extension_2.12:2.11.0-3.4'
-        ]
+        "com.clickhouse.spark:clickhouse-spark-runtime-3.5_2.12:0.8.0"
+        ,"com.clickhouse:clickhouse-jdbc:0.7.0"
+        ,"com.clickhouse:clickhouse-client:0.7.0"
+        ,"com.clickhouse:clickhouse-http-client:0.7.0"
+        ,"org.apache.httpcomponents.client5:httpclient5:5.3.1"
+        ,'org.apache.sedona:sedona-spark-3.5_2.12:1.7.0'
+        ,'org.datasyslab:geotools-wrapper:1.7.0-28.5'
+        ,'uk.co.gresearch.spark:spark-extension_2.12:2.11.0-3.4'
+    ]
 
 
 
@@ -41,7 +54,7 @@ default_args = {
     "retries": 0
 }
 
-ram = 2
+ram = 40
 
 
 
@@ -78,7 +91,9 @@ def spark_clickhouse_test():
     )
     def run_spark_task(spark: SparkSession, sc: SparkContext):
         config = (
-            SedonaContext.builder()
+            SparkSession.builder
+            .master(f"spark://spark-master:7077")
+            .config('spark.jars.repositories', 'https://artifacts.unidata.ucar.edu/repository/unidata-all')
             .config("spark.sql.catalog.clickhouse", "com.clickhouse.spark.ClickHouseCatalog")
             .config("spark.sql.catalog.clickhouse.host", CH_IP)
             .config("spark.sql.catalog.clickhouse.protocol", "http")
@@ -90,8 +105,9 @@ def spark_clickhouse_test():
             .getOrCreate()
         )
 
+        SedonaRegistrator.registerAll(config)
 
-        spark = SedonaContext.create(config)
+        #spark = SedonaContext.create(config)
         sc = spark.sparkContext
         spark.sql("USE clickhouse")
         df = spark.sql("SELECT * FROM card_data.darknet_data LIMIT 5")
