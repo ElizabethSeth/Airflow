@@ -57,8 +57,6 @@ default_args = {
 ram = 40
 
 
-
-
 @dag(
     tags=["test", "stocks"],
     render_template_as_native_obj=True,
@@ -115,7 +113,7 @@ def spark_clickhouse_test():
 
     spark_submit_task = SparkSubmitOperator(
         task_id='spark_submit_job',
-        application='dags/spark_app/spark_1.py',
+        application='dags/spark_app/attemps_coding.py',
         conn_id=PYSPARK_CONN_ID,
         packages=','.join(packages),
         #executor_cores='1',
